@@ -1,3 +1,4 @@
+
 .cat_pic {
   max-width:100%;
 
@@ -21,6 +22,7 @@
 
 #header_div{
   background-color:orange;
+  margin-bottom:5%;
 }
 
 @media screen and (max-width:480px) {

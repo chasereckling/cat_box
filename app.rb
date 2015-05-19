@@ -17,7 +17,7 @@ get('/game') do
   @kitty1 = Cat.find(rand(1..3))
   @kitty2 = Cat.find(rand(1..3))
 
-erb(:game)
+  erb(:game)
 end
 
 patch('/game') do
