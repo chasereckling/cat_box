@@ -25,14 +25,13 @@
 
     <div class="cat_div">
       <%= @kitty1.name%>
-      <img class="cat_pic" src="<%=@kitty1.image%>">
+      <img class="cat_pic" src="<%=@kitty1.image%>" />
 
       <form name="choice" action="/game" method="post">
         <input name="_method" type="hidden" value="patch">
         <input name="choice" type="hidden" value="left_cat">
         <input name="winning_id" type="hidden" value="<%=@kitty1.id%>">
         <input name="losing_id" type="hidden" value="<%=@kitty2.id%>">
-
 
         <button name="choice" type="submit" class="btn btn-danger">Cat 1</button>
       </form>
@@ -43,7 +42,7 @@
 
     <div class="cat_div">
       <%= @kitty2.name%>
-      <img class="cat_pic" src="<%=@kitty2.image%>">
+      <img class="cat_pic" src="<%=@kitty2.image%>" />
 
       <form name="choice" action="/game" method="post">
         <input name="_method" type="hidden" value="patch">
