@@ -6,17 +6,10 @@ get('/') do
   erb(:index)
 end
 
-post('/') do
-  Cat.create({:name => "Tbone", :wins => 0, :loss => 0, :image => "http://s18.postimg.org/x9s3ehc09/tbone.jpg"})
-  Cat.create({:name => "Freckles", :wins => 0, :loss => 0, :image => "http://s8.postimg.org/rhzsiqluc/freckles.jpg"})
-  Cat.create({:name => "Truman", :wins => 0, :loss => 0, :image => "http://s11.postimg.org/k9osn032b/truman.jpg"})
-  redirect('/game')
-end
-
 get('/game') do
   @cats = Cat.all().order(wins: :desc)
-  @kitty1 = Cat.find(rand(1..3))
-  @kitty2 = Cat.find(rand(1..3))
+  @kitty1 = Cat.find(rand(1..@cats.length))
+  @kitty2 = Cat.find(rand(1..@cats.length))
   if @kitty1 == @kitty2
     redirect('/game')
   end
