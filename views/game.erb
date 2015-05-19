@@ -11,7 +11,13 @@
 
   <div class="col-sm-3">
 
-    This is where we put the winners
+    <h3>Cat Stats:</h3>
+
+    <ol>
+      <% @cats.each do |cat|%>
+      <li><%=cat.name()%> Wins: <%=cat.wins()%> Losses: <%=cat.loss()%></li>
+      <%end%>
+    </ol>
 
   </div>
 
