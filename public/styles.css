@@ -13,3 +13,24 @@
   margin-left:40%;
   margin-top:10%;
 }
+
+.header{
+  margin:0 auto;
+  margin-left:40%;
+}
+
+#header_div{
+  background-color:orange;
+}
+
+@media screen and (max-width:500px) {
+  .header{
+    margin:0 auto;
+    margin-left:20%;
+
+  }
+
+  #header_div{
+    background-color:red;
+  }
+}
