@@ -23,10 +23,10 @@
   background-color:orange;
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:480px) {
   .header{
     margin:0 auto;
-    margin-left:20%;
+    margin-left:30%;
 
   }
 
