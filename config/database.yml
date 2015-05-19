@@ -1,0 +1,9 @@
+development:
+  adapter: postgresql
+  database: battle_cats_development
+  template: template0
+
+test:
+  adapter: postgresql
+  database: battle_cats_test
+  template: template0

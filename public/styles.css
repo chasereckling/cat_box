@@ -1,0 +1,15 @@
+.cat_pic {
+  max-width:100%;
+
+}
+
+.cat_div{
+  width:200px;
+  display:inline-block;
+  margin:10px;
+}
+
+.btn-danger{
+  margin-left:40%;
+  margin-top:10%;
+}
