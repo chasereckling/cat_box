@@ -34,11 +34,11 @@
 <!-- LEFT HAND MODAL -->
   <div class="col-sm-4">
 
-    <div class="cat_div">
+    <div class="cat-div">
       <div class="modal_container">
         <h4><%= @kitty1.name%></h4>
         <!-- Trigger the modal with a button -->
-        <a data-toggle="modal" data-target="#myModal"><div class="pic-div"><img class="cat-pic" src="<%=@kitty1.image%>" /></div></a>
+        <a data-toggle="modal" data-target="#myModal"><img class="cat-pic" src="<%=@kitty1.image%>" /></a>
 
         <!-- Modal -->
         <div class="modal fade" id="myModal" role="dialog">
@@ -62,18 +62,21 @@
             </div>
           </div>
         </div>
-      </div>
+
     </div>
 
-    <div class="choice-button">
-      <form name="choice" action="/game" method="post">
-        <input name="_method" type="hidden" value="patch">
-        <input name="choice" type="hidden" value="right_cat">
-        <input name="winning_id" type="hidden" value="<%=@kitty1.id%>">
-        <input name="losing_id" type="hidden" value="<%=@kitty2.id%>">
+      <div class="choice-button">
+        <form name="choice" action="/game" method="post">
+          <input name="_method" type="hidden" value="patch">
+          <input name="choice" type="hidden" value="right_cat">
+          <input name="winning_id" type="hidden" value="<%=@kitty1.id%>">
+          <input name="losing_id" type="hidden" value="<%=@kitty2.id%>">
 
-        <button name="choice" type="submit" class="btn btn-danger">Cat 2</button>
-      </form>
+          <button name="choice" type="submit" class="btn btn-danger">Cat 2</button>
+        </form>
+      </div>
+
+
     </div>
   </div>
 
@@ -82,11 +85,11 @@
 <!-- RIGHT HAND MODAL -->
   <div class="col-sm-4">
 
-    <div class="cat_div">
+    <div class="cat-div">
       <div class="modal_container">
         <h4><%= @kitty2.name%></h4>
         <!-- Trigger the modal with a button -->
-        <a data-toggle="modal" data-target="#myModal2"><div class="pic-div"><img class="cat-pic" src="<%=@kitty2.image%>" /></div></a>
+        <a data-toggle="modal" data-target="#myModal2"><img class="cat-pic" src="<%=@kitty2.image%>" /></a>
 
         <!-- Modal -->
         <div class="modal fade" id="myModal2" role="dialog">
@@ -111,19 +114,20 @@
           </div>
         </div>
       </div>
-    </div>
-      <div class="choice-button">
-        <form name="choice" action="/game" method="post">
-          <input name="_method" type="hidden" value="patch">
-          <input name="choice" type="hidden" value="right_cat">
-          <input name="winning_id" type="hidden" value="<%=@kitty2.id%>">
-          <input name="losing_id" type="hidden" value="<%=@kitty1.id%>">
 
-          <button name="choice" type="submit" class="btn btn-danger">Cat 2</button>
-        </form>
+        <div class="choice-button">
+          <form name="choice" action="/game" method="post">
+            <input name="_method" type="hidden" value="patch">
+            <input name="choice" type="hidden" value="right_cat">
+            <input name="winning_id" type="hidden" value="<%=@kitty2.id%>">
+            <input name="losing_id" type="hidden" value="<%=@kitty1.id%>">
+
+            <button name="choice" type="submit" class="btn btn-danger">Cat 2</button>
+          </form>
+        </div>
+
       </div>
-  </div>
-
+    </div>
 </div>
 
 
