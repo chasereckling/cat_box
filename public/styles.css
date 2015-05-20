@@ -1,7 +1,12 @@
 body{
-  background-color:black;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300;}
+  font-weight: 300;
+}
+
+.container{
+  background-color:black;
+  margin-top:3%;
+}
 
 .cat-div{
   width:100%;
@@ -37,12 +42,10 @@ body{
 
 .header {
   margin: 0 auto;
-  margin-left: 40%;
-  font-size:
+  font-size: 90px;
 }
 
 #row_1{
-  margin-top:3%;
   height:100px;
 }
 
@@ -110,4 +113,9 @@ margin:10%;
     margin-top:10%;
     margin-left:30%;
 }
-           /*# sourceMappingURL=styles.css.map */
+
+.logo{
+  height:80px;
+  margin-top:4%;
+}
+       /*# sourceMappingURL=styles.css.map */
