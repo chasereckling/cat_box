@@ -38,6 +38,7 @@ body{
   transition:opacity;
   transition-duration:.7s;
   transition-timing-function:ease-in-out;
+  border-radius:30%;
 
 }
 
@@ -70,7 +71,7 @@ body{
 
 #row_1{
   height:100px;
-  background-color:orange;
+  background-color:white;
 }
 
 #row_2{
@@ -99,7 +100,7 @@ margin:10%;
   background-color: red; } }
 
 .stats-header{
-  color:orange;
+  color:white;
   font-size:30px;
   margin:0 auto;
   margin-left:10%;
@@ -108,13 +109,13 @@ margin:10%;
 
 .cat-name{
   padding:15px;
-  color:orange;
+  color:white;
   font-size:20px;
   margin-left:10%;
 }
 
 .stats-div{
-  border:5px solid orange;
+  border:5px solid white;
   border-radius:10%;
   padding:15px;
 }
@@ -123,16 +124,12 @@ margin:10%;
   list-style-type:none;
   }
 
+.stats-stats{
+  color:white;
+}
+
 .stats-name{
   color: #C00000;
-
-}
-
-.stats-stats{
-  color:orange;
-}
-
-.stats-name{
   font-size:20px;
   font-weight:bold;
 }
@@ -155,7 +152,7 @@ margin:10%;
 }
 
 .header_form{
-  color:orange;
+  color:white;
   margin-bottom:2%;
 }
 
