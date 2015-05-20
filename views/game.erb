@@ -1,3 +1,5 @@
+
+<!-- first row with header -->
 <div class="row" id="row_1">
 
   <div class="col-sm-12" id="header_div">
@@ -7,9 +9,13 @@
   </div>
 </div>
 
+
+
+
+<!-- second row cat stats -->
 <div class="row">
 
-  <div class="col-sm-3">
+  <div class="col-sm-4">
 
     <h3>Cat Stats:</h3>
 
@@ -21,14 +27,18 @@
 
   </div>
 
-  <div class="col-sm-9">
+
+
+
+
+<!-- LEFT HAND MODAL -->
+  <div class="col-sm-4">
 
     <div class="cat_div">
-      <%= @kitty1.name%>
-      <div class="container">
-        <h2>Modal Example</h2>
+      <div class="modal_container">
+        <h4><%= @kitty1.name%></h4>
         <!-- Trigger the modal with a button -->
-        <a data-toggle="modal" data-target="#myModal"><img src="<%=@kitty1.image%>" /></a>
+        <a data-toggle="modal" data-target="#myModal"><div class="pic-div"><img class="cat-pic" src="<%=@kitty1.image%>" /></div></a>
 
         <!-- Modal -->
         <div class="modal fade" id="myModal" role="dialog">
@@ -53,26 +63,30 @@
           </div>
         </div>
       </div>
-
-      <form name="choice" action="/game" method="post">
-        <input name="_method" type="hidden" value="patch">
-        <input name="choice" type="hidden" value="left_cat">
-        <input name="winning_id" type="hidden" value="<%=@kitty1.id%>">
-        <input name="losing_id" type="hidden" value="<%=@kitty2.id%>">
-
-        <button name="choice" type="submit" class="btn btn-danger">Cat 1</button>
-      </form>
     </div>
 
+    <div class="choice-button">
+      <form name="choice" action="/game" method="post">
+        <input name="_method" type="hidden" value="patch">
+        <input name="choice" type="hidden" value="right_cat">
+        <input name="winning_id" type="hidden" value="<%=@kitty2.id%>">
+        <input name="losing_id" type="hidden" value="<%=@kitty1.id%>">
+
+        <button name="choice" type="submit" class="btn btn-danger">Cat 2</button>
+      </form>
+    </div>
+  </div>
 
 
+
+<!-- RIGHT HAND MODAL -->
+  <div class="col-sm-4">
 
     <div class="cat_div">
-      <%= @kitty2.name%>
-      <div class="container">
-        <h2>Modal Example</h2>
+      <div class="modal_container">
+        <h4><%= @kitty2.name%></h4>
         <!-- Trigger the modal with a button -->
-        <a data-toggle="modal" data-target="#myModal2"><img src="<%=@kitty2.image%>" /></a>
+        <a data-toggle="modal" data-target="#myModal2"><div class="pic-div"><img class="cat-pic" src="<%=@kitty2.image%>" /></div></a>
 
         <!-- Modal -->
         <div class="modal fade" id="myModal2" role="dialog">
@@ -97,21 +111,24 @@
           </div>
         </div>
       </div>
-
-      <form name="choice" action="/game" method="post">
-        <input name="_method" type="hidden" value="patch">
-        <input name="choice" type="hidden" value="right_cat">
-        <input name="winning_id" type="hidden" value="<%=@kitty2.id%>">
-        <input name="losing_id" type="hidden" value="<%=@kitty1.id%>">
-
-        <button name="choice" type="submit" class="btn btn-danger">Cat 2</button>
-      </form>
     </div>
+      <div class="choice-button">
+        <form name="choice" action="/game" method="post">
+          <input name="_method" type="hidden" value="patch">
+          <input name="choice" type="hidden" value="right_cat">
+          <input name="winning_id" type="hidden" value="<%=@kitty2.id%>">
+          <input name="losing_id" type="hidden" value="<%=@kitty1.id%>">
 
+          <button name="choice" type="submit" class="btn btn-danger">Cat 2</button>
+        </form>
+      </div>
   </div>
 
 </div>
 
 
-<a class="twitter-timeline" href="https://twitter.com/battlecatspdx" data-widget-id="600794044608815104">Tweets by @battlecatspdx</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<br><br><br><br><br><br><br><br><br>
+
+  <a class="twitter-timeline" href="https://twitter.com/battlecatspdx" data-widget-id="600794044608815104">Tweets by @battlecatspdx</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
