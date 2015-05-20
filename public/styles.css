@@ -37,7 +37,9 @@ body{
 
 .header {
   margin: 0 auto;
-  margin-left: 40%; }
+  margin-left: 40%;
+  font-size:
+}
 
 #row_1{
   margin-top:3%;
@@ -66,6 +68,7 @@ margin:10%;
   background-color: red; } }
 
 .stats-header{
+  color:orange;
   font-size:30px;
   margin:0 auto;
   margin-left:10%;
@@ -73,15 +76,15 @@ margin:10%;
 }
 
 .cat-name{
-  margin: 0 auto;
-  margin-left:50%;
   padding:15px;
   color:orange;
-  font-size:30px;
+  font-size:20px;
+  margin-left:10%;
 }
 
 .stats-div{
-  border:2px solid orange;
+  border:5px solid orange;
+  border-radius:10%;
   padding:15px;
 }
 
@@ -103,8 +106,8 @@ margin:10%;
   font-weight:bold;
 }
 
-  #col{
-    background-color:red;
-  }
-
+.twitter-div{
+    margin-top:10%;
+    margin-left:30%;
+}
            /*# sourceMappingURL=styles.css.map */
