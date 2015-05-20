@@ -43,6 +43,11 @@ body{
 .header {
   margin: 0 auto;
   font-size: 90px;
+  top:0px;
+}
+
+.animate-header{
+  top:-1000px;
 }
 
 #row_1{
@@ -123,12 +128,15 @@ margin:10%;
 #upload_form{
   color:white;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300;}
+  font-weight: 300;
+}
 
-  .header_form{
-    color:orange;
-    margin-bottom:2%;
+.header_form{
+  color:orange;
+  margin-bottom:2%;
+}
 
-  }
-  
+
+
+
        /*# sourceMappingURL=styles.css.map */
