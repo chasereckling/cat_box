@@ -25,10 +25,17 @@ body{
 .cat-pic{
   margin:0;
   padding:0;
-    /*height:80%;
-    width:80%;*/
-    max-height: 80%;
-    max-width: 80%;
+  max-height: 80%;
+  max-width: 80%;
+  opacity:0;
+  transition:opacity;
+  transition-duration:.7s;
+  transition-timing-function:ease-in-out;
+
+}
+
+.animate-cat-pic{
+  opacity:100;
 }
 
 
@@ -43,15 +50,20 @@ body{
 .header {
   margin: 0 auto;
   font-size: 90px;
-  top:0px;
+  position:absolute;
+  /*right:-1000px;
+  transition:right;
+  transition-duration:.1s;
+  transition-timing-function:ease-in-out;*/
 }
 
-.animate-header{
-  top:-1000px;
-}
+/*.animate-header{
+  right:300px;
+}*/
 
 #row_1{
   height:100px;
+  background-color:orange;
 }
 
 #row_2{
@@ -61,7 +73,6 @@ margin:10%;
 #header_div {
   width:100%;
   height:100%;
-  background-color: orange;
   }
 
 .form_div {
