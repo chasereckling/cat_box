@@ -1,11 +1,13 @@
 
 <!-- first row with header -->
 <div class="row" id="row_1">
-
-  <div class="col-sm-12" id="header_div">
-
-    <h1 class="header">Battle Cats</h1>
-
+  <div id="header_div">
+    <div class="col-sm-2" class="logo_div">
+      <img class="logo" src= "http://vignette3.wikia.nocookie.net/streamclan-roleplaying/images/0/06/Vector-cat-silhouette-shape2.jpg/revision/latest?cb=20141221173003" />
+    </div>
+    <div class="col-sm-10">
+      <h1 class="header">Battle Cats</h1>
+    </div>
   </div>
 </div>
 
@@ -13,17 +15,22 @@
 
 
 <!-- second row cat stats -->
-<div class="row">
+<div class="row" id="row_2">
 
   <div class="col-sm-4">
 
-    <h3>Cat Stats:</h3>
+    <div class="stats-div">
 
-    <ol>
-      <% @cats.each do |cat|%>
-      <li><%=cat.name()%> Wins: <%=cat.wins()%> Losses: <%=cat.loss()%></li>
-      <%end%>
-    </ol>
+      <h3 class="stats-header">Cat Stats</h3>
+
+      <ol>
+        <% @cats.each do |cat|%>
+        <li class="stats-name"><%=cat.name()%></li><li class="stats-stats"> Wins: <%=cat.wins()%> &nbsp&nbspLosses: <%=cat.loss()%></li>
+        <br>
+        <%end%>
+      </ol>
+
+    </div>
 
   </div>
 
@@ -34,11 +41,14 @@
 <!-- LEFT HAND MODAL -->
   <div class="col-sm-4">
 
-    <div class="cat_div">
+    <!-- CAT NAME -->
+
+    <div class="cat-div">
+
       <div class="modal_container">
-        <h4><%= @kitty1.name%></h4>
+
         <!-- Trigger the modal with a button -->
-        <a data-toggle="modal" data-target="#myModal"><div class="pic-div"><img class="cat-pic" src="<%=@kitty1.image%>" /></div></a>
+        <a data-toggle="modal" data-target="#myModal"><img class="cat-pic" src="<%=@kitty1.image%>" /></a>
 
         <!-- Modal -->
         <div class="modal fade" id="myModal" role="dialog">
@@ -65,18 +75,21 @@
             </div>
           </div>
         </div>
-      </div>
+
     </div>
 
-    <div class="choice-button">
-      <form name="choice" action="/game" method="post">
-        <input name="_method" type="hidden" value="patch">
-        <input name="choice" type="hidden" value="right_cat">
-        <input name="winning_id" type="hidden" value="<%=@kitty2.id%>">
-        <input name="losing_id" type="hidden" value="<%=@kitty1.id%>">
+      <div class="choice-button">
+        <form name="choice" action="/game" method="post">
+          <input name="_method" type="hidden" value="patch">
+          <input name="choice" type="hidden" value="right_cat">
+          <input name="winning_id" type="hidden" value="<%=@kitty1.id%>">
+          <input name="losing_id" type="hidden" value="<%=@kitty2.id%>">
 
-        <button name="choice" type="submit" class="btn btn-danger">Cat 2</button>
-      </form>
+          <button name="choice" type="submit" class="btn btn-danger">Vote for <%= @kitty1.name%></button>
+        </form>
+      </div>
+
+
     </div>
   </div>
 
@@ -85,11 +98,12 @@
 <!-- RIGHT HAND MODAL -->
   <div class="col-sm-4">
 
-    <div class="cat_div">
+    <!-- CAT NAME -->
+    <div class="cat-div">
+
       <div class="modal_container">
-        <h4><%= @kitty2.name%></h4>
         <!-- Trigger the modal with a button -->
-        <a data-toggle="modal" data-target="#myModal2"><div class="pic-div"><img class="cat-pic" src="<%=@kitty2.image%>" /></div></a>
+        <a data-toggle="modal" data-target="#myModal2"><img class="cat-pic" src="<%=@kitty2.image%>" /></a>
 
         <!-- Modal -->
         <div class="modal fade" id="myModal2" role="dialog">
@@ -117,24 +131,44 @@
           </div>
         </div>
       </div>
-    </div>
-      <div class="choice-button">
-        <form name="choice" action="/game" method="post">
-          <input name="_method" type="hidden" value="patch">
-          <input name="choice" type="hidden" value="right_cat">
-          <input name="winning_id" type="hidden" value="<%=@kitty2.id%>">
-          <input name="losing_id" type="hidden" value="<%=@kitty1.id%>">
 
-          <button name="choice" type="submit" class="btn btn-danger">Cat 2</button>
-        </form>
+        <div class="choice-button">
+          <form name="choice" action="/game" method="post">
+            <input name="_method" type="hidden" value="patch">
+            <input name="choice" type="hidden" value="right_cat">
+            <input name="winning_id" type="hidden" value="<%=@kitty2.id%>">
+            <input name="losing_id" type="hidden" value="<%=@kitty1.id%>">
+
+            <button name="choice" type="submit" class="btn btn-danger">Vote for <%= @kitty2.name%></button>
+          </form>
+        </div>
+
       </div>
-  </div>
-
+    </div>
 </div>
 
-
-
-<br><br><br><br><br><br><br><br><br>
-
+<div class="twitter-div">
   <a class="twitter-timeline" href="https://twitter.com/battlecatspdx" data-widget-id="600794044608815104">Tweets by @battlecatspdx</a>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+  // var headerAnimation = function(){
+  //   $(".header").addClass("animate-header")
+  //
+  // }
+
+
+  var picAnimation = function(){
+    $(".cat-pic").addClass("animate-cat-pic")
+  }
+
+  // window.onload = headerAnimation();
+  window.onload = picAnimation();
+
+
+  $(".btn-danger").click(function(){
+    $(".cat-pic").addClass("animate-cat-pic")
+  })
+
+
+  </script>
