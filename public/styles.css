@@ -1,3 +1,8 @@
+body{
+  background-color:black;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;}
+
 .cat-div{
   width:100%;
   max-width:100%;
@@ -34,9 +39,20 @@
   margin: 0 auto;
   margin-left: 40%; }
 
+#row_1{
+  margin-top:3%;
+  height:100px;
+}
+
+#row_2{
+margin:10%;
+}
+
 #header_div {
+  width:100%;
+  height:100%;
   background-color: orange;
-  margin-bottom: 5%; }
+  }
 
 .form_div {
   margin: 0 auto; }
@@ -49,5 +65,46 @@
 #header_div {
   background-color: red; } }
 
+.stats-header{
+  font-size:30px;
+  margin:0 auto;
+  margin-left:10%;
+  margin-bottom:10%;
+}
 
-                    /*# sourceMappingURL=styles.css.map */
+.cat-name{
+  margin: 0 auto;
+  margin-left:50%;
+  padding:15px;
+  color:orange;
+  font-size:30px;
+}
+
+.stats-div{
+  border:2px solid orange;
+  padding:15px;
+}
+
+.stats-div li{
+  list-style-type:none;
+  }
+
+.stats-name{
+  color: #C00000;
+
+}
+
+.stats-stats{
+  color:orange;
+}
+
+.stats-name{
+  font-size:20px;
+  font-weight:bold;
+}
+
+  #col{
+    background-color:red;
+  }
+
+           /*# sourceMappingURL=styles.css.map */

@@ -13,17 +13,22 @@
 
 
 <!-- second row cat stats -->
-<div class="row">
+<div class="row" id="row_2">
 
   <div class="col-sm-4">
 
-    <h3>Cat Stats:</h3>
+    <div class="stats-div">
 
-    <ol>
-      <% @cats.each do |cat|%>
-      <li><%=cat.name()%> Wins: <%=cat.wins()%> Losses: <%=cat.loss()%></li>
-      <%end%>
-    </ol>
+      <h3 class="stats-header">Cat Stats</h3>
+
+      <ol>
+        <% @cats.each do |cat|%>
+        <li class="stats-name"><%=cat.name()%></li><li class="stats-stats"> Wins: <%=cat.wins()%> &nbsp&nbspLosses: <%=cat.loss()%></li>
+        <br>
+        <%end%>
+      </ol>
+
+    </div>
 
   </div>
 
@@ -32,11 +37,14 @@
 
 
 <!-- LEFT HAND MODAL -->
-  <div class="col-sm-4">
+  <div class="col-sm-4" id="col">
+
+    <!-- CAT NAME -->
+    <h4 class="cat-name"><%= @kitty1.name%></h4>
 
     <div class="cat-div">
       <div class="modal_container">
-        <h4><%= @kitty1.name%></h4>
+
         <!-- Trigger the modal with a button -->
         <a data-toggle="modal" data-target="#myModal"><img class="cat-pic" src="<%=@kitty1.image%>" /></a>
 
@@ -72,7 +80,7 @@
           <input name="winning_id" type="hidden" value="<%=@kitty1.id%>">
           <input name="losing_id" type="hidden" value="<%=@kitty2.id%>">
 
-          <button name="choice" type="submit" class="btn btn-danger">Cat 2</button>
+          <button name="choice" type="submit" class="btn btn-danger">Vote for <%= @kitty1.name%></button>
         </form>
       </div>
 
@@ -85,9 +93,11 @@
 <!-- RIGHT HAND MODAL -->
   <div class="col-sm-4">
 
+    <!-- CAT NAME -->
+    <h4 class="cat-name"><%= @kitty2.name%></h4>
+
     <div class="cat-div">
       <div class="modal_container">
-        <h4><%= @kitty2.name%></h4>
         <!-- Trigger the modal with a button -->
         <a data-toggle="modal" data-target="#myModal2"><img class="cat-pic" src="<%=@kitty2.image%>" /></a>
 
@@ -122,7 +132,7 @@
             <input name="winning_id" type="hidden" value="<%=@kitty2.id%>">
             <input name="losing_id" type="hidden" value="<%=@kitty1.id%>">
 
-            <button name="choice" type="submit" class="btn btn-danger">Cat 2</button>
+            <button name="choice" type="submit" class="btn btn-danger">Vote for <%= @kitty2.name%></button>
           </form>
         </div>
 
