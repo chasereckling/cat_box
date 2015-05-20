@@ -50,6 +50,16 @@ patch('/game') do
 end
 
 get('/profile/:id') do
-  @cat = Cat.find(params.fetch("id").to_i())
+  @cat = Cat.find(params.fetch("id"))
+  @comments = @cat.comments()
   erb(:profile)
+end
+
+post('/profile/:id') do
+  @cat = Cat.find(params.fetch("id").to_i())
+  comment = params.fetch("comment")
+  id = params.fetch("id").to_i()
+  @new_comment = Comment.create({:description => comment, :cat_id => id})
+  @comments = @cat.comments()
+  redirect("/profile/#{@cat.id}")
 end
