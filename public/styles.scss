@@ -1,0 +1,40 @@
+
+.cat-pic {
+  width:100%
+}
+
+.cat_div{
+  width:200px;
+  display:inline-block;
+  margin:10px;
+}
+
+.btn-danger{
+  margin-left:40%;
+  margin-top:10%;
+}
+
+.header{
+  margin:0 auto;
+  margin-left:40%;
+}
+
+#header_div{
+  background-color:orange;
+  margin-bottom:5%;
+}
+
+.form_div{
+  margin:0 auto;
+}
+
+@media screen and (max-width:480px) {
+  .header{
+    margin:0 auto;
+    margin-left:30%;
+  }
+
+  #header_div{
+    background-color:red;
+  }
+}

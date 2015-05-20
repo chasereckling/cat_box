@@ -25,10 +25,10 @@
 
     <div class="cat_div">
       <%= @kitty1.name%>
-      <div class="container">
+      <div class="modal_container">
         <h2>Modal Example</h2>
         <!-- Trigger the modal with a button -->
-        <a data-toggle="modal" data-target="#myModal"><img src="<%=@kitty1.image%>" /></a>
+        <a data-toggle="modal" data-target="#myModal"><div class="pic-div"><img class="cat-pic" src="<%=@kitty1.image%>" /></div></a>
 
         <!-- Modal -->
         <div class="modal fade" id="myModal" role="dialog">
@@ -68,10 +68,10 @@
 
     <div class="cat_div">
       <%= @kitty2.name%>
-      <div class="container">
+      <div class="modal_container">
         <h2>Modal Example</h2>
         <!-- Trigger the modal with a button -->
-        <a data-toggle="modal" data-target="#myModal2"><img src="<%=@kitty2.image%>" /></a>
+        <a data-toggle="modal" data-target="#myModal2"><div class="pic-div"><img class="cat-pic" src="<%=@kitty2.image%>" /></div></a>
 
         <!-- Modal -->
         <div class="modal fade" id="myModal2" role="dialog">
