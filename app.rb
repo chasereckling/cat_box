@@ -1,6 +1,7 @@
 require("bundler/setup")
 Bundler.require(:default, :production)
 Dir[File.dirname(__FILE__) + '/lib/*.rb'].each { |file| require file }
+require('pry')
 
 get('/') do
   erb(:index)
@@ -46,4 +47,9 @@ patch('/game') do
   @winning_kitty.update(:wins => win + 1)
   @losing_kitty.update(:loss => loss + 1)
   redirect('/game')
+end
+
+get('/profile/:id') do
+  @cat = Cat.find(params.fetch("id").to_i())
+  erb(:profile)
 end
