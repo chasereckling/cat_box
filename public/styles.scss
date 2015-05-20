@@ -7,6 +7,7 @@
   width:200px;
   display:inline-block;
   margin:10px;
+  background-color:blue;
 }
 
 .btn-danger{
@@ -37,4 +38,8 @@
   #header_div{
     background-color:red;
   }
+}
+.choice-button{
+  background-color:red;
+  max-width:30%;
 }
