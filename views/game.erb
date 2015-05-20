@@ -69,8 +69,8 @@
       <form name="choice" action="/game" method="post">
         <input name="_method" type="hidden" value="patch">
         <input name="choice" type="hidden" value="right_cat">
-        <input name="winning_id" type="hidden" value="<%=@kitty2.id%>">
-        <input name="losing_id" type="hidden" value="<%=@kitty1.id%>">
+        <input name="winning_id" type="hidden" value="<%=@kitty1.id%>">
+        <input name="losing_id" type="hidden" value="<%=@kitty2.id%>">
 
         <button name="choice" type="submit" class="btn btn-danger">Cat 2</button>
       </form>
