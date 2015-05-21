@@ -3,9 +3,36 @@ Bundler.require(:default, :production)
 Dir[File.dirname(__FILE__) + '/lib/*.rb'].each { |file| require file }
 require('pry')
 
+helpers do
+  def protected!
+    return if authorized?
+    headers['WWW-Authenticate'] = 'Basic realm="BATTLE CATS!!!!!!!!!"'
+    halt 401, "YOU AM NO CAT LEGEND\n"
+  end
+
+  def authorized?
+    @auth ||=  Rack::Auth::Basic::Request.new(request.env)
+    @auth.provided? and @auth.basic? and @auth.credentials and @auth.credentials == ['mryamyam', 'mryamyam']
+  end
+end
+
+
 get('/') do
   erb(:index)
 end
+
+get('/login') do
+  protected!
+  @cats = Cat.all().order(wins: :desc)
+  @kitty1 = Cat.find(rand(1..@cats.length))
+  @kitty2 = Cat.find(rand(1..@cats.length))
+  if @kitty1 == @kitty2
+    redirect('/game')
+  end
+  erb(:game)
+end
+
+
 
 get('/upload') do
   erb(:upload)
@@ -15,7 +42,11 @@ post('/upload') do
   name = params.fetch("name")
   bio = params.fetch("bio")
   photo = params.fetch("photo")
-  new_cat = Cat.create({:name => name, :wins => 0, :loss => 0, :image => photo, :bio => bio})
+  location = params.fetch("location")
+  birthday = params.fetch("birthday")
+  naparea = params.fetch("naparea")
+  relationship = params.fetch("relationship")
+  new_cat = Cat.create({:name => name,:wins => 0, :loss => 0, :image => photo, :bio => bio, :naparea => naparea, :location => location, :birthday => birthday, :relationship => relationship})
   @cats = Cat.all().order(wins: :desc)
   @kitty1 = Cat.find(rand(1..@cats.length))
   @kitty2 = Cat.find(rand(1..@cats.length))
