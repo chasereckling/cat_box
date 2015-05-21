@@ -109,6 +109,8 @@ post('/profile/:id/likes') do
   @cat.likes.push(like)
   @cats_likes = @cat.likes
   erb(:likes)
+end
+
 
 get('/photos/:id') do
   @cat = Cat.find(params.fetch("id").to_i())

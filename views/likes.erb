@@ -104,8 +104,6 @@
 
 
 
-
-
 <!-- LIKES PAGE BELOW -->
 
     <div class="row">
@@ -120,13 +118,15 @@
 <!-- HOME BUTTON -->
         <a href="/profile/<%=@cat.id%>"><img class="nav-bar-element" id="home-button" src="https://cdn0.iconfinder.com/data/icons/realty-1/512/cat_house-512.png" /></a>
 
+
+<br><br>
 <!-- MY LIKES -->
 
         <%@cats_likes.each do |like|%>
-          <div class="like-div">
+          <figure class="like-added">
             <img class="like-pic" src="<%= like.image %>" />
-            <span class="like-name"> <%= like.name %> </span>
-          </div>
+            <figcaption> <%= like.name %> </figcaption>
+          </figure>
         <% end %>
 
 
@@ -138,12 +138,12 @@
 
 <!-- OTHER POSSIBLE LIKES  -->
 
-        <div class="col-md-4">
+        <div class="col-md-4" id="add-like-div">
 
 
           <h4>Add Likes</h4>
 
-          <form action="/profile/<%= @cat.id %>/likes" method="post">
+          <form class="like-form" action="/profile/<%= @cat.id %>/likes" method="post">
             <select name="like" id="like">
               <% (@all_likes-@cats_likes).each do |like|%>
               <option value="<%=like.id%>">
@@ -154,7 +154,6 @@
             <button type="submit">Add Like</button>
           </form>
 
-<br><br>
 
 
           <h4>All Likes</h4>
