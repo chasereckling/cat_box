@@ -53,15 +53,7 @@
               </div>
               <!-- Modal body-->
               <div class="modal-body">
-                <ul>
-                  <% if @friends.any?() %>
-                  <% @cat.friends.each() do |friend| %>
-                  <li><%= friend.name() %></li>
-                  <% end %>
-                  <%else%>
-                  <p>You have no friends.</p>
-                  <%end%>
-                </ul>
+<!-- HERE IS A LIST OF FRIENDS THAT YOU CANT REALLY FRIEND!  -->
                 <div class="modal-footer">
                   <form action="/cats/<%=@cat.id%>" method="get">
                     <button id="profile" class='btn btn-primary'>Add Friends</button>

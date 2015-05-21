@@ -43,7 +43,6 @@ patch('/game') do
   @losing_kitty = Cat.find(params.fetch("losing_id").to_i)
   win = @winning_kitty.wins
   loss = @losing_kitty.loss
-
   @winning_kitty.update(:wins => win + 1)
   @losing_kitty.update(:loss => loss + 1)
   redirect('/game')
@@ -52,7 +51,6 @@ end
 get('/profile/:id') do
   @cat = Cat.find(params.fetch("id"))
   @comments = @cat.comments()
-  @friends = @cat.friends()
   erb(:profile)
 end
 
@@ -74,6 +72,7 @@ end
 patch('/profile/:id') do
   @cats = Cat.all()
   @cat = Cat.find(params.fetch("id").to_i())
-
+  # new_friend = Cat.find(params.fetch("friend_ids").to_i)
+  # @cat.friend.push(new_friend)
   redirect("/profile/#{@cat.id}")
 end
