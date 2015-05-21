@@ -67,7 +67,7 @@
                   <h4 class="modal-title">Modal Header</h4>
                 </div>
                 <div class="modal-body">
-                  <img src="<%= @kitty1.image%>">
+                  <img class="cat-pic-modal" src="<%= @kitty1.image%>">
                   <p><%= @kitty1.name%></p>
                   <p><%= @kitty1.bio %></p>
                 </div>
@@ -83,7 +83,7 @@
 
       </div>
 
-        <div class="choice-button">
+        <div class="choice-div">
           <form name="choice" action="/game" method="post">
             <input name="_method" type="hidden" value="patch">
             <input name="choice" type="hidden" value="right_cat">
@@ -98,7 +98,7 @@
       </div>
     </div>
 
-  <div style="margin-top:40px;" class="col-sm-1">
+  <div style="margin-top:80px;" class="col-sm-1">
     <h2 style="color:red;">VS</h2>
   </div>
 
@@ -127,7 +127,7 @@
                   <h4 class="modal-title">Meet your Battle Cat!</h4>
                 </div>
                 <div class="modal-body">
-                  <img src="<%= @kitty2.image%>">
+                  <img class="cat-pic-modal" src="<%= @kitty2.image%>">
                   <p><%= @kitty2.name%></p>
                   <p><%= @kitty2.bio %></p>
                 </div>
@@ -142,7 +142,7 @@
           </div>
         </div>
 
-          <div class="choice-button">
+          <div class="choice-div">
             <form name="choice" action="/game" method="post">
               <input name="_method" type="hidden" value="patch">
               <input name="choice" type="hidden" value="right_cat">
