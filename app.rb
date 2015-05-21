@@ -63,3 +63,8 @@ post('/profile/:id') do
   @comments = @cat.comments()
   redirect("/profile/#{@cat.id}")
 end
+
+get('/profile/:id/likes') do
+  @cat = Cat.find(params.fetch("id").to_i)
+  erb(:likes)
+end

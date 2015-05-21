@@ -248,8 +248,19 @@ margin:5%;
   width:70px;
   max-width:100%;
   max-height:100%;
-  background-color:grey;
+  border:3px solid gray;
+  border-radius:4px;
   color:black;
   margin:30px;
   margin-top:60%;
+}
+
+#likes-button{
+  margin:0;
+  margin-top:200px;
+}
+
+.likes-form{
+  margin:0;
+  padding:0;
 }
