@@ -88,7 +88,8 @@ post('/profile/:id') do
   @cat = Cat.find(params.fetch("id").to_i())
   comment = params.fetch("comment")
   id = params.fetch("id").to_i()
-  @new_comment = Comment.create({:description => comment, :cat_id => id})
+  image = params.fetch("comment_img")
+  @new_comment = Comment.create({:description => comment, :cat_id => id, :comment_photo => image })
   @comments = @cat.comments()
   redirect("/profile/#{@cat.id}")
 end
