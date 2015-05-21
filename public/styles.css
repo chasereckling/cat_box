@@ -92,7 +92,6 @@ margin:5%;
   }
 
 #profile_header_div {
-  background-color: blue;
   text-color: white;
 }
 
@@ -202,6 +201,18 @@ margin:5%;
 
 }
 
+.blog-list{
+  list-style:none;
+}
+
+
+.blog-post-div{
+  background-color:grey;
+  padding:10px;
+  margin:15px;
+  border-radius:10px;
+
+}
 
 
        /*# sourceMappingURL=styles.css.map */

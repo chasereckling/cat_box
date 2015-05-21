@@ -1,29 +1,105 @@
 
-<div class="row" id="row_1">
+<div class="row" id="profile-row-1">
 
-  <div class="col-sm-12" id="profile_header_div">
+  <div class="col-md-12" id="profile_header_div">
 
     <h1 class="header"><%=@cat.name()%></h1>
 
   </div>
-<br><br><br><br>
-  <div class="col-sm-4" float-right>
-    <div class="pic-div"><img class="profile-cat-pic" src="<%=@cat.image%>" /></div>
+
+
+<div class="row">
+
+  <div class="col-md-4">
+<!-- PROFILE PICTURE  -->
+    <div class="pic-div">
+      <img class="profile-cat-pic" src="<%=@cat.image%>" />
+    </div>
+
   </div>
 
-  <div>
-  <form action="/profile/<%=@cat.id%>" method="post">
-    <div class="form-group">
-      <label for="comment"> </label>
-      <input text="comment" name="comment" id="comment" class="form-control">
-    </form>
-    </div>
-    <div>
-      <button type="submit">Submit Comment</button>
+
+
+<!-- NAVIGATION BAR BELOW -->
+  <div class="col-md-8">
+
+    <div class="col-sm-3">
+<!-- ABOUT ME MODAL BUTTON  -->
+
+
+
     </div>
 
-    <ul>
-      <% @comments.each() do |comment| %>
-      <li><%= comment.description() %></li>
-      <% end %>
-    </ul>
+    <div class="col-sm-3">
+<!-- FRIENDS PAGE BUTTON -->
+
+
+
+    </div>
+
+    <div class="col-sm-3">
+<!-- PHOTO PAGE BUTTON -->
+
+
+
+    </div>
+
+    <div class="col-sm-3">
+<!-- LIKES PAGE BUTTON -->
+
+
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+<!-- EVERYTHING BELOW PICTURE AND NAVIGATION BAR -->
+<div class="row">
+
+  <div class="col-md-6">
+<!-- BRIEF ABOUT ME SECTION BELOW PICTURE -->
+
+
+
+
+<!-- GAMES SECTION SHOWING WHAT THE KITTY IS PLAYING -->
+
+
+
+
+
+  </div>
+
+  <div class="col-md-6">
+<!-- PROFILE BLOG FORM -->
+
+
+  <div class="blog-form">
+    <form action="/profile/<%=@cat.id%>" method="post">
+      <div class="form-group">
+      <label for="comment"> </label>
+      <input text="comment" name="comment" id="comment" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-info">Submit Comment</button>
+    </form>
+  </div>
+
+<!-- PROFILE BLOG POSTS -->
+  <ul class="blog-list">
+    <% @comments.each() do |comment| %>
+    <li><div class="blog-post-div"><%= comment.description() %></div></li>
+    <% end %>
+  </ul>
+
+
+
+
+  </div>
+
+</div>
