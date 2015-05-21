@@ -200,6 +200,7 @@ margin:5%;
 
 .blog-list{
   list-style:none;
+  word-wrap: break-word;
 }
 
 
