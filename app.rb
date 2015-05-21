@@ -106,7 +106,7 @@ post('/profile/:id/likes') do
   like = Like.find(params.fetch("like").to_i)
   @cat.likes.push(like)
   @cats_likes = @cat.likes
-  erb(:likes)
+  redirect("/profile/#{@cat.id}/likes")
 end
 
 
