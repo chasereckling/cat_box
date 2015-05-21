@@ -227,9 +227,19 @@ margin:5%;
 
 .about-me-brief{
   background-color:grey;
-  padding:10px;
+  padding:7px;
+  margin:5%;
+  border-radius:10px;
 }
 
 .about-me-brief-list{
   list-style:none;
+  padding:5%;
+  margin:0;
+  line-height:25px;
+}
+
+.about-me-brief-headers{
+  font-weight:bold;
+  font-size:15px;
 }
