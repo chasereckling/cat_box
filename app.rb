@@ -67,5 +67,15 @@ end
 get('/profile/:id/likes') do
   @cat = Cat.find(params.fetch("id").to_i)
   @all_likes = Like.all().order(name: :asc)
+  @cats_likes = @cat.likes
+  erb(:likes)
+end
+
+post('/profile/:id/likes') do
+  @cat = Cat.find(params.fetch("id").to_i)
+  @all_likes = Like.all().order(name: :asc)
+  like = Like.find(params.fetch("like").to_i)
+  @cat.likes.push(like)
+  @cats_likes = @cat.likes
   erb(:likes)
 end
