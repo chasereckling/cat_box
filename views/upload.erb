@@ -1,17 +1,18 @@
 <div class="game-container">
 
   <h1 class="header_form"> Upload your kitty at your own risk </h1>
-
+  <div class="cat-gif-div">
+    <img class="cat-gif" src="/img/catfight.gif" />
+  </div>
   <form action="/upload" method="post">
     <div class="form-group" id="upload_form">
       <label for="name"> Add kitty's name:</label>
-      <input text="text" name="name" id="name" class="form-control">
+      <input type="text" name="name" id="name" class="form-control">
 
       <label for="bio"> Add kitty's bio:</label>
-      <input text="bio" name="bio" id="bio" class="form-control">
-
+      <textarea name="bio" id="bio" class="form-control" rows="4" cols="50"></textarea>
       <label for="photo"> Add url of kitty's photo:</label>
-      <input text="photo" name="photo" id="photo" class="form-control">
+      <input type="text" name="photo" id="photo" class="form-control">
       <br>
       <button type="submit" class="btn btn-default">Upload kitty for battle!</button>
     </div>
