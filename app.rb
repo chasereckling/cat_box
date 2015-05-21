@@ -56,8 +56,6 @@ post('/upload') do
   erb(:game)
 end
 
-
-
 get('/game') do
   @cats = Cat.all().order(wins: :desc)
   @kitty1 = Cat.find(rand(1..@cats.length))
