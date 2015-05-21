@@ -45,6 +45,11 @@ ActiveRecord::Schema.define(version: 20150521220212) do
     t.string  "comment_photo"
   end
 
+  create_table "friendings", force: :cascade do |t|
+    t.integer "friend_id"
+    t.integer "friender_id"
+  end
+
   create_table "likes", force: :cascade do |t|
     t.string "name"
     t.string "image"
@@ -53,11 +58,6 @@ ActiveRecord::Schema.define(version: 20150521220212) do
   create_table "photos", force: :cascade do |t|
     t.integer "cat_id"
     t.string  "profile_image"
-  end
-
-  create_table "friendings", force: :cascade do |t|
-    t.integer "friend_id"
-    t.integer "friender_id"
   end
 
 end
