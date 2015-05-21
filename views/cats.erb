@@ -1,0 +1,14 @@
+<h1>Search for friends:</h1>
+
+<form action='/profile/<%= @cat.id %>' method='post'>
+  <input type="hidden" name="_method" value="patch">
+  <% @cats.each() do |cat| %>
+  <a href="/cat/<%=cat.id()%>"><img class="cat-thumbnail" src="<%=cat.image%>" /></a><%= cat.name() %>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" id="friend_ids" name="friend_ids" value="<%= cat.id() %>"><%= cat.name() %>
+    </label>
+  </div>
+  <% end %>
+  <button class='btn btn-success btn-xs' id="add_friend">Add Friend</button>
+</form>
