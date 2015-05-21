@@ -65,7 +65,20 @@ post('/profile/:id') do
   redirect("/profile/#{@cat.id}")
 end
 
-get('/cats') do
+get('/cats/:id') do
   @cats = Cat.all()
+  @cat = Cat.find(params.fetch("id").to_i())
   erb(:cats)
+end
+
+patch('/profile/:id') do
+  @cat = Cat.find(params.fetch("id").to_i())
+  new_friend = Friend.create({:ref_id => params.fetch("friend_ids").to_i})
+  # if(params.has_key?('friend_ids'))
+    # params.fetch('friend_ids').each() do |friend_id|
+  @cat.friends.push(new_friend)
+    # end
+  # end
+  # @friends = Friend.where.not(id: @cat.friend_ids)
+  redirect("/profile/#{@cat.id}")
 end

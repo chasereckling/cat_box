@@ -11,10 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150521175032) do
+ActiveRecord::Schema.define(version: 20150521212942) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cat_friends", id: false, force: :cascade do |t|
+    t.integer "cat_id_1", null: false
+    t.integer "cat_id_2", null: false
+  end
 
   create_table "cats", force: :cascade do |t|
     t.string   "name"
@@ -31,21 +36,9 @@ ActiveRecord::Schema.define(version: 20150521175032) do
     t.string   "naparea"
   end
 
-  create_table "cats_friends", id: false, force: :cascade do |t|
-    t.integer "cat_id"
-    t.integer "friend_id"
-  end
-
-  add_index "cats_friends", ["cat_id"], name: "index_cats_friends_on_cat_id", using: :btree
-  add_index "cats_friends", ["friend_id"], name: "index_cats_friends_on_friend_id", using: :btree
-
   create_table "comments", force: :cascade do |t|
     t.integer "cat_id"
     t.text    "description"
-  end
-
-  create_table "friends", force: :cascade do |t|
-    t.string "name"
   end
 
 end
