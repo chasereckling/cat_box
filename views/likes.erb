@@ -1,0 +1,146 @@
+<div class="profile-container">
+
+
+
+<!-- HEADER BELOW -->
+
+  <div class="row">
+
+    <div class="col-md-4">
+
+<!-- KITTY NAME  -->
+
+      <h1 class="profile-header"><%=@cat.name()%></h1>
+
+
+
+<!-- PROFILE PICTURE  -->
+
+      <div class="pic-div">
+        <img class="profile-cat-pic" src="<%=@cat.image%>" />
+      </div>
+
+    </div>
+
+
+    <!-- NAVIGATION BAR BELOW -->
+        <div class="col-md-8">
+
+          <div class="col-sm-3">
+    <!-- ABOUT ME MODAL -->
+
+            <div class="modal_container">
+
+              <!-- Trigger the modal with a button -->
+              <a data-toggle="modal" data-target="#myModal"><img class="nav-bar-element" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons-256/rounded-glossy-black-icons-animals/016581-rounded-glossy-black-icon-animals-animal-cat4.png" /></a>
+
+              <!-- Modal -->
+              <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+
+
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title"><%=@cat.name%></h4>
+                    </div>
+
+                    <div class="modal-body">
+                      <img class="cat-pic-modal" src="<%= @cat.image%>">
+
+
+                      <ul class="about-me-list">
+                        <li><span class="about-me-brief-headers">Location</span> <%=@cat.location%></li>
+                        <li><span class="about-me-brief-headers">Birthday</span> <%=@cat.birthday%></li>
+                        <li><span class="about-me-brief-headers">Favorite Nap Area</span> <%=@cat.naparea%></li>
+                        <li><span class="about-me-brief-headers">Relationship Status</span> <%=@cat.relationship%></li>
+                        <br>
+                        <li><%=@cat.bio%></li>
+                      </ul>
+
+                    </div>
+
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="col-sm-3">
+    <!-- FRIENDS PAGE BUTTON -->
+
+          </div>
+
+          <div class="col-sm-3">
+    <!-- PHOTO PAGE BUTTON -->
+
+
+          </div>
+
+          <div class="col-sm-3">
+    <!-- LIKES PAGE BUTTON -->
+
+            <a href="/profile/<%=@cat.id%>/likes"><img class="nav-bar-element" id="likes-button" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-black-icons-animals/012572-glossy-black-icon-animals-animal-cat-print.png" />
+            </a>
+
+          </div>
+
+        </div>
+
+
+  </div>
+
+
+
+
+
+
+
+
+<!-- LIKES PAGE BELOW -->
+
+    <div class="row">
+
+
+
+
+<!-- MY LIKES & HOME BUTTON  -->
+
+      <div class="col-md-9">
+
+
+        <a href="/profile/<%=@cat.id%>"><img class="nav-bar-element" id="home-button" src="https://cdn0.iconfinder.com/data/icons/realty-1/512/cat_house-512.png" /></a>
+
+
+
+
+        <h1>LIST OF ADDED LIKES GO HERE</h1>
+
+
+      </div>
+
+
+
+
+
+
+<!-- OTHER POSSIBLE LIKES  -->
+
+        <div class="col-md-3">
+
+          <h1>LIST OF OTHER LIKES TO ADD</h1>
+
+        </div>
+
+    </div>
+
+</div>

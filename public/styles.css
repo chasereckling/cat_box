@@ -197,10 +197,20 @@ margin:5%;
 
 /*PROFILE CSS*/
 
+.profile-container{
+  background-color:#BADBDC;
+  margin-top:3%;
+
+}
 
 .blog-list{
   list-style:none;
   word-wrap: break-word;
+}
+
+.blog-form{
+  padding:20px;
+  padding-left:0;
 }
 
 
@@ -213,14 +223,87 @@ margin:5%;
 }
 
 .profile-cat-pic {
+  padding-left:40px;
+  padding-top:0;
   margin-bottom: 5%;
-  width: 250px;
-  max-width:100%;
-  max-height:100%;
+  width: 150px;
+  max-width:150px;
 
 }
 
 
-#profile_header_div {
-  text-color: white;
+.profile-header{
+  padding:20px;
+  padding-bottom:5px;
+}
+
+.about-me-brief{
+  background-color:grey;
+  padding:7px;
+  margin:5%;
+  border-radius:10px;
+}
+
+.about-me-list{
+  list-style:none;
+  padding:5%;
+  margin:0;
+  line-height:25px;
+}
+
+.about-me-brief-headers{
+  font-weight:bold;
+  font-size:15px;
+}
+
+.nav-bar-element{
+  width:70px;
+  max-width:100%;
+  max-height:100%;
+  color:black;
+  margin:30px;
+  margin-top:30%;
+}
+
+#likes-button{
+  margin:0;
+  margin-top:110px;
+}
+
+.likes-form{
+  margin:0;
+  padding:0;
+}
+
+#home-button{
+  margin:0;
+  padding:0;
+}
+
+.game-list{
+  list-style:none;
+  padding:10px;
+}
+
+.game-list li{
+  padding:3px;
+}
+
+.game-link{
+  margin:3%;
+  font-size:15px;
+  color:white;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 600;
+
+}
+
+.game-link:hover{
+  text-decoration: none;
+  color:navy;
+}
+
+.game-logo{
+  width:60px;
+  max-width:60px;
 }

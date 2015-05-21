@@ -32,16 +32,56 @@
     <div class="col-md-8">
 
       <div class="col-sm-3">
-<!-- ABOUT ME MODAL BUTTON  -->
+<!-- ABOUT ME MODAL -->
+
+        <div class="modal_container">
+
+          <!-- Trigger the modal with a button -->
+          <a data-toggle="modal" data-target="#myModal"><img class="nav-bar-element" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons-256/rounded-glossy-black-icons-animals/016581-rounded-glossy-black-icon-animals-animal-cat4.png" /></a>
+
+          <!-- Modal -->
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
 
 
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title"><%=@cat.name%></h4>
+                </div>
 
+                <div class="modal-body">
+                  <img class="cat-pic-modal" src="<%= @cat.image%>">
+
+
+                  <ul class="about-me-list">
+                    <li><span class="about-me-brief-headers">Location</span> <%=@cat.location%></li>
+                    <li><span class="about-me-brief-headers">Birthday</span> <%=@cat.birthday%></li>
+                    <li><span class="about-me-brief-headers">Favorite Nap Area</span> <%=@cat.naparea%></li>
+                    <li><span class="about-me-brief-headers">Relationship Status</span> <%=@cat.relationship%></li>
+                    <br>
+                    <li><%=@cat.bio%></li>
+                  </ul>
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
+
+
+
 
       <div class="col-sm-3">
 <!-- FRIENDS PAGE BUTTON -->
-
-
 
       </div>
 
@@ -49,13 +89,13 @@
 <!-- PHOTO PAGE BUTTON -->
 
 
-
       </div>
 
       <div class="col-sm-3">
 <!-- LIKES PAGE BUTTON -->
 
-
+        <a href="/profile/<%=@cat.id%>/likes"><img class="nav-bar-element" id="likes-button" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-black-icons-animals/012572-glossy-black-icon-animals-animal-cat-print.png" />
+        </a>
 
       </div>
 
@@ -76,6 +116,18 @@
 <!-- BRIEF ABOUT ME SECTION BELOW PICTURE -->
 
 
+      <div class="about-me-brief">
+
+        <ul class="about-me-list">
+
+          <li><span class="about-me-brief-headers">Location</span> <%=@cat.location%></li>
+          <li><span class="about-me-brief-headers">Birthday</span> <%=@cat.birthday%></li>
+          <li><span class="about-me-brief-headers">Favorite Nap Area</span> <%=@cat.naparea%></li>
+          <li><span class="about-me-brief-headers">Relationship Status</span> <%=@cat.relationship%></li>
+
+        </ul>
+
+      </div>
 
 
 
@@ -84,6 +136,24 @@
 <!-- GAMES SECTION SHOWING WHAT THE KITTY IS PLAYING -->
 
 
+        <div class="about-me-brief">
+
+          <h4 class="game-box-header">Games</h4>
+
+          <ul class="game-list">
+
+            <li><a class="game-link" href="/game"><img class="game-logo" src="http://vignette3.wikia.nocookie.net/streamclan-roleplaying/images/0/06/Vector-cat-silhouette-shape2.jpg/revision/latest?cb=20141221173003" />
+              <span class="game-name">Battle Cats</span></a></li>
+            <li><a class="game-link" href="/game"><img class="game-logo" src="http://s3.amazonaws.com/kidzworld_photo/images/2013519/6b4640d8-fea0-4e63-b3a3-461ceaa1468d/sahara-gallery.jpg" />
+              <span class="game-name">Infinite CATBOX</span></a></li>
+            <li><a class="game-link" href="/game"><img class="game-logo" src="https://cf.geekdo-images.com/images/pic1470097.jpg" />
+              <span class="game-name">Escape From NY pounds</span></a></li>
+            <li><a class="game-link" href="/game"><img class="game-logo" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRLme0vTcSCB2eq6dcoXOCzv5BK8gUB5LKDD7-uyd3rCaAnalzw" />
+              <span class="game-name">MOUSEtrap</span></a></li>
+
+          </ul>
+
+        </div>
 
 
 
