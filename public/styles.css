@@ -10,7 +10,7 @@ body{
   font-weight: 300;
 }
 
-.container{
+.game-container{
   background-color:black;
   margin-top:3%;
 }
@@ -89,7 +89,9 @@ margin:10%;
 }
 
 .form_div {
-  margin: 0 auto; }
+  margin: 0 auto;
+
+}
 
 @media screen and (max-width: 480px) {
   .header {
@@ -149,11 +151,15 @@ margin:10%;
   color:white;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
+  padding:20px;
+  margin:20px;
 }
 
 .header_form{
   color:white;
+  padding:2%;
   margin-bottom:2%;
+  margin-left:25%;
 }
 
 

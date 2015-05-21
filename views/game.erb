@@ -1,178 +1,179 @@
-
-<!-- first row with header -->
-<div class="row" id="row_1">
-  <div id="header_div">
-    <div class="col-sm-2" class="logo_div">
-      <img class="logo" src= "http://vignette3.wikia.nocookie.net/streamclan-roleplaying/images/0/06/Vector-cat-silhouette-shape2.jpg/revision/latest?cb=20141221173003" />
+<div class="game-container">
+  <!-- first row with header -->
+  <div class="row" id="row_1">
+    <div id="header_div">
+      <div class="col-sm-2" class="logo_div">
+        <img class="logo" src= "http://vignette3.wikia.nocookie.net/streamclan-roleplaying/images/0/06/Vector-cat-silhouette-shape2.jpg/revision/latest?cb=20141221173003" />
+      </div>
+      <div class="col-sm-10">
+        <h1 class="header">Battle Cats</h1>
+      </div>
     </div>
-    <div class="col-sm-10">
-      <h1 class="header">Battle Cats</h1>
-    </div>
-  </div>
-</div>
-
-
-
-
-<!-- second row cat stats -->
-<div class="row" id="row_2">
-
-  <div class="col-sm-3">
-
-    <div class="stats-div">
-
-      <h3 class="stats-header">Cat Stats</h3>
-
-      <ol>
-        <% @cats.each do |cat|%>
-        <li class="stats-name"><%=cat.name()%></li><li class="stats-stats"> Wins: <%=cat.wins()%> &nbsp&nbspLosses: <%=cat.loss()%></li>
-        <br>
-        <%end%>
-      </ol>
-
-    </div>
-
   </div>
 
 
 
 
+  <!-- second row cat stats -->
+  <div class="row" id="row_2">
 
-<!-- LEFT HAND MODAL -->
-  <div class="col-sm-4">
+    <div class="col-sm-3">
 
-    <!-- CAT NAME -->
+      <div class="stats-div">
 
-    <div class="cat-div">
+        <h3 class="stats-header">Cat Stats</h3>
 
-      <div class="modal_container">
+        <ol>
+          <% @cats.each do |cat|%>
+          <li class="stats-name"><%=cat.name()%></li><li class="stats-stats"> Wins: <%=cat.wins()%> &nbsp&nbspLosses: <%=cat.loss()%></li>
+          <br>
+          <%end%>
+        </ol>
 
-        <!-- Trigger the modal with a button -->
-        <a data-toggle="modal" data-target="#myModal"><img class="cat-pic" src="<%=@kitty1.image%>" /></a>
-
-        <!-- Modal -->
-        <div class="modal fade" id="myModal" role="dialog">
-          <div class="modal-dialog">
-
-
-            <!-- Modal content-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Modal Header</h4>
-              </div>
-              <div class="modal-body">
-                <img src="<%= @kitty1.image%>">
-                <p><%= @kitty1.name%></p>
-                <p><%= @kitty1.bio %></p>
-              </div>
-              <div class="modal-footer">
-                <form action="/profile/<%=@kitty1.id()%>" method="get">
-                  <button id="profile" class='btn btn-primary'>Profile</button>
-                </form>
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-          </div>
-        </div>
-
-    </div>
-
-      <div class="choice-button">
-        <form name="choice" action="/game" method="post">
-          <input name="_method" type="hidden" value="patch">
-          <input name="choice" type="hidden" value="right_cat">
-          <input name="winning_id" type="hidden" value="<%=@kitty1.id%>">
-          <input name="losing_id" type="hidden" value="<%=@kitty2.id%>">
-
-          <button name="choice" type="submit" class="btn btn-danger">Vote for <%= @kitty1.name%></button>
-        </form>
       </div>
 
-
     </div>
-  </div>
-
-<div style="margin-top:40px;" class="col-sm-1">
-  <h2 style="color:red;">VS</h2>
-</div>
 
 
 
-<!-- RIGHT HAND MODAL -->
-  <div class="col-sm-4">
-
-    <!-- CAT NAME -->
-    <div class="cat-div">
-
-      <div class="modal_container">
-        <!-- Trigger the modal with a button -->
-        <a data-toggle="modal" data-target="#myModal2"><img class="cat-pic" src="<%=@kitty2.image%>" /></a>
-
-        <!-- Modal -->
-        <div class="modal fade" id="myModal2" role="dialog">
-          <div class="modal-dialog">
 
 
-            <!-- Modal content-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Meet your Battle Cat!</h4>
-              </div>
-              <div class="modal-body">
-                <img src="<%= @kitty2.image%>">
-                <p><%= @kitty2.name%></p>
-                <p><%= @kitty2.bio %></p>
-              </div>
-              <div class="modal-footer">
-                <form action="/profile/<%=@kitty2.id()%>" method="get">
-                  <button id="profile" class='btn btn-primary'>Profile</button>
-                </form>
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+  <!-- LEFT HAND MODAL -->
+    <div class="col-sm-4">
+
+      <!-- CAT NAME -->
+
+      <div class="cat-div">
+
+        <div class="modal_container">
+
+          <!-- Trigger the modal with a button -->
+          <a data-toggle="modal" data-target="#myModal"><img class="cat-pic" src="<%=@kitty1.image%>" /></a>
+
+          <!-- Modal -->
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                  <img src="<%= @kitty1.image%>">
+                  <p><%= @kitty1.name%></p>
+                  <p><%= @kitty1.bio %></p>
+                </div>
+                <div class="modal-footer">
+                  <form action="/profile/<%=@kitty1.id()%>" method="get">
+                    <button id="profile" class='btn btn-primary'>Profile</button>
+                  </form>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
               </div>
             </div>
           </div>
-        </div>
+
       </div>
 
         <div class="choice-button">
           <form name="choice" action="/game" method="post">
             <input name="_method" type="hidden" value="patch">
             <input name="choice" type="hidden" value="right_cat">
-            <input name="winning_id" type="hidden" value="<%=@kitty2.id%>">
-            <input name="losing_id" type="hidden" value="<%=@kitty1.id%>">
+            <input name="winning_id" type="hidden" value="<%=@kitty1.id%>">
+            <input name="losing_id" type="hidden" value="<%=@kitty2.id%>">
 
-            <button name="choice" type="submit" class="btn btn-danger">Vote for <%= @kitty2.name%></button>
+            <button name="choice" type="submit" class="btn btn-danger">Vote for <%= @kitty1.name%></button>
           </form>
         </div>
 
+
       </div>
     </div>
+
+  <div style="margin-top:40px;" class="col-sm-1">
+    <h2 style="color:red;">VS</h2>
+  </div>
+
+
+
+  <!-- RIGHT HAND MODAL -->
+    <div class="col-sm-4">
+
+      <!-- CAT NAME -->
+      <div class="cat-div">
+
+        <div class="modal_container">
+          <!-- Trigger the modal with a button -->
+          <a data-toggle="modal" data-target="#myModal2"><img class="cat-pic" src="<%=@kitty2.image%>" /></a>
+
+          <!-- Modal -->
+          <div class="modal fade" id="myModal2" role="dialog">
+            <div class="modal-dialog">
+
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Meet your Battle Cat!</h4>
+                </div>
+                <div class="modal-body">
+                  <img src="<%= @kitty2.image%>">
+                  <p><%= @kitty2.name%></p>
+                  <p><%= @kitty2.bio %></p>
+                </div>
+                <div class="modal-footer">
+                  <form action="/profile/<%=@kitty2.id()%>" method="get">
+                    <button id="profile" class='btn btn-primary'>Profile</button>
+                  </form>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <div class="choice-button">
+            <form name="choice" action="/game" method="post">
+              <input name="_method" type="hidden" value="patch">
+              <input name="choice" type="hidden" value="right_cat">
+              <input name="winning_id" type="hidden" value="<%=@kitty2.id%>">
+              <input name="losing_id" type="hidden" value="<%=@kitty1.id%>">
+
+              <button name="choice" type="submit" class="btn btn-danger">Vote for <%= @kitty2.name%></button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+  </div>
+
+  <div class="twitter-div">
+    <a class="twitter-timeline" href="https://twitter.com/battlecatspdx" data-widget-id="600794044608815104">Tweets by @battlecatspdx</a>
+  </div>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+    // var headerAnimation = function(){
+    //   $(".header").addClass("animate-header")
+    //
+    // }
+
+
+    var picAnimation = function(){
+      $(".cat-pic").addClass("animate-cat-pic")
+    }
+
+    // window.onload = headerAnimation();
+    window.onload = picAnimation();
+
+
+    $(".btn-danger").click(function(){
+      $(".cat-pic").addClass("animate-cat-pic")
+    })
+
+
+    </script>
 </div>
-
-<div class="twitter-div">
-  <a class="twitter-timeline" href="https://twitter.com/battlecatspdx" data-widget-id="600794044608815104">Tweets by @battlecatspdx</a>
-</div>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-
-  // var headerAnimation = function(){
-  //   $(".header").addClass("animate-header")
-  //
-  // }
-
-
-  var picAnimation = function(){
-    $(".cat-pic").addClass("animate-cat-pic")
-  }
-
-  // window.onload = headerAnimation();
-  window.onload = picAnimation();
-
-
-  $(".btn-danger").click(function(){
-    $(".cat-pic").addClass("animate-cat-pic")
-  })
-
-
-  </script>
