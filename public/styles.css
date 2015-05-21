@@ -195,6 +195,27 @@ margin:5%;
 
 
 
+/*INDEX CSS*/
+
+.index-header-div{
+  padding:10px;
+  margin:30px;
+}
+
+.index-header{
+  margin:0 auto;
+  font-size:40px;
+
+}
+
+.catbook-logo{
+  height:100px;
+  max-height:100px;
+}
+
+
+
+
 /*PROFILE CSS*/
 
 .profile-container{
