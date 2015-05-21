@@ -219,7 +219,6 @@ margin:5%;
 /*PROFILE CSS*/
 
 .profile-container{
-  margin-top:3%;
 
 
 }
@@ -361,4 +360,16 @@ margin:5%;
 .like-form{
   margin-bottom:40px;
 
+}
+
+#layout-logo{
+  float:right;
+  height:50px;
+  max-height:50px;
+}
+
+#layout-header{
+  float:right;
+  font-size:20px;
+  padding-top:5px;
 }
