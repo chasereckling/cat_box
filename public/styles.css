@@ -198,8 +198,8 @@ margin:5%;
 /*PROFILE CSS*/
 
 .profile-container{
-  background-color:#BADBDC;
   margin-top:3%;
+  
 
 }
 
@@ -215,7 +215,7 @@ margin:5%;
 
 
 .blog-post-div{
-  background-color:grey;
+  background-color:lightgrey;
   padding:10px;
   margin:15px;
   border-radius:10px;
@@ -238,7 +238,7 @@ margin:5%;
 }
 
 .about-me-brief{
-  background-color:grey;
+  background-color:#BADBDC;
   padding:7px;
   margin:5%;
   border-radius:10px;
@@ -306,4 +306,14 @@ margin:5%;
 .game-logo{
   width:60px;
   max-width:60px;
+}
+
+.like-div{
+  padding:10px;
+
+}
+
+.like-pic{
+  width:70px;
+  max-width:70px;
 }

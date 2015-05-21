@@ -120,12 +120,6 @@
 
         <a href="/profile/<%=@cat.id%>"><img class="nav-bar-element" id="home-button" src="https://cdn0.iconfinder.com/data/icons/realty-1/512/cat_house-512.png" /></a>
 
-
-
-
-        <h1>LIST OF ADDED LIKES GO HERE</h1>
-
-
       </div>
 
 
@@ -137,7 +131,14 @@
 
         <div class="col-md-3">
 
-          <h1>LIST OF OTHER LIKES TO ADD</h1>
+
+          <%@all_likes.each do |like|%>
+            <div class="like-div">
+              <img class="like-pic" src="<%= like.image %>" />
+              <span class="like-name"> <%= like.name %> </span>
+            </div>
+          <% end %>
+
 
         </div>
 

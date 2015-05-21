@@ -1,5 +1,5 @@
 require('./lib/cat')
-
+require('./lib/like')
 
 Cat.create({:name => "Tbone", :wins => 0, :loss => 0, :image => "http://s18.postimg.org/x9s3ehc09/tbone.jpg", :bio => "Tbone has the crouch of a lackey. He was brought up to be independent and after leaving school he fell in with a bad crowd. He married badly. When he served time for fraud he took up painting. Now he travel round in a beaten up old Ford van.", :location => "Portland, OR", :relationship => "single", :birthday => "May 8, 2011", :naparea => "sun sun sun!"})
 
@@ -33,12 +33,12 @@ Like.create({:name => "Mice", :image =>"http://www.rochesterexterminating.com/co
 
 Like.create({:name => "Water", :image =>"http://www.blastr.com/sites/blastr/files/water_572238684.jpg"})
 
-Like.create({:name => "Laying in Sunny Spots", :image =>"http://hellogiggles.com/wp-content/uploads/2014/07/22/cat-in-the-sun.jpg"})
+Like.create({:name => "Laying in Sun", :image =>"http://hellogiggles.com/wp-content/uploads/2014/07/22/cat-in-the-sun.jpg"})
 
 Like.create({:name => "Other Cats", :image =>"http://vignette1.wikia.nocookie.net/houseofnight/images/8/8b/Cats.jpg/revision/latest?cb=20130812053537"})
 
 Like.create({:name => "People", :image =>"http://images.huffingtonpost.com/2014-09-10-teens.jpg"})
 
-Like.create({:name => "Incessant Scratching", :image =>"https://www.petfinder.com/wp-content/uploads/2012/11/106887241-litter-box-etiquette-632x475.jpg"})
+Like.create({:name => "Incessant Digging", :image =>"http://www.catster.com/files/cat-litter%20box_0.jpg"})
 
-Like.create({:name => "Ruining Furniture", :image =>"http://blog.vetnpetdirect.com.au/wp-content/uploads/2015/03/cat-scratching-furniture.jpg"})
+Like.create({:name => "Ruining Furniture", :image =>"http://www.icatcare.org/sites/default/files/kcfinder/images/images/cat-scratching.jpg"})

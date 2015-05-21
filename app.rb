@@ -66,5 +66,6 @@ end
 
 get('/profile/:id/likes') do
   @cat = Cat.find(params.fetch("id").to_i)
+  @all_likes = Like.all().order(name: :asc)
   erb(:likes)
 end
