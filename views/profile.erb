@@ -54,6 +54,9 @@
               <!-- Modal body-->
               <div class="modal-body">
 <!-- HERE IS A LIST OF FRIENDS THAT YOU CANT REALLY FRIEND!  -->
+<% @cats.each() do |cat| %>
+<a href="/cat/<%=cat.id()%>"><img class="cat-thumbnail" src="<%=cat.image%>" /></a><%= cat.name() %>
+<%end%>
                 <div class="modal-footer">
                   <form action="/cats/<%=@cat.id%>" method="get">
                     <button id="profile" class='btn btn-primary'>Add Friends</button>

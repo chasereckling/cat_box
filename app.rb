@@ -49,6 +49,7 @@ patch('/game') do
 end
 
 get('/profile/:id') do
+  @cats = Cat.all()
   @cat = Cat.find(params.fetch("id"))
   @comments = @cat.comments()
   erb(:profile)
