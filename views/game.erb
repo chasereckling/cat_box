@@ -25,7 +25,9 @@
 
         <ol class="stats-list">
           <% @cats.each do |cat|%>
-          <li class="stats-name"><%=cat.name()%></li><li class="stats-stats"> Wins: <%=cat.wins()%> &nbsp&nbspLosses: <%=cat.loss()%></li>
+            <li class="stats-name"><%=cat.name()%></li>
+            <li><img class="cat-thumbnail" src="<%=cat.image%>" />
+            <li class="stats-stats"> Wins: <%=cat.wins()%> <br>Losses: <%=cat.loss()%></li>
           <br>
           <%end%>
         </ol>
