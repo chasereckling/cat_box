@@ -64,3 +64,8 @@ post('/profile/:id') do
   @comments = @cat.comments()
   redirect("/profile/#{@cat.id}")
 end
+
+get('/cats') do
+  @cats = Cat.all()
+  erb(:cats)
+end

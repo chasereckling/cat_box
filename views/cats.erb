@@ -1,0 +1,13 @@
+<h1>Search for friends:</h1>
+
+<% if @cats.any?() %>
+
+  <ul>
+    <% @cats.each() do |cat| %>
+    <li><a href="/cat/<%=cat.id()%>" id="<%=cat.id()%>"><%= cat.name() %><img class="cat-thumbnail" src="<%=cat.image%>" /></a></li>
+    <% end %>
+  </ul>
+
+  <% else %>
+  <p>There are no cats added yet.</p>
+  <% end %>
