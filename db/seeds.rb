@@ -22,3 +22,23 @@ Cat.create({:name => "Bruce", :wins => 0, :loss => 0, :image => "http://s9.posti
 Cat.create({:name => "Shiba", :wins => 0, :loss => 0, :image => "http://s22.postimg.org/5pyyi112p/Shiba.jpg", :bio => "Shiba is a mess of emotions. She has no moral fibre. She was brought up in the inner-city. When she left to seek her fortune she did voluntary service in Africa. She married her flatmate. When disaster struck she became advisor to a rich Arabian prince.", :location => "Seattle, WA", :relationship => "married to Buster", :birthday => "May 8, 2011", :naparea => "on the book you're reading"})
 
 Cat.create({:name => "Buster", :wins => 0, :loss => 0, :image => "http://s23.postimg.org/o9jyce8uz/buster.jpg", :bio => "Buster is gloomy and sad. He has a history of cheating on his partners. He was brought up the son of a diplomat. When he got expelled from school he spent a few years as a tour guide. He married the girl next door. When he was exposed by the press he found himself unable to continue.", :location => "Portland, OR", :relationship => "married to Shiba", :birthday => "May 8, 2011", :naparea => "on the book you're reading"})
+
+Like.create({:name => "Meow Mix", :image =>"http://ecx.images-amazon.com/images/I/811r%2BpY-l4L._SL1500_.jpg"})
+
+Like.create({:name => "Friskies", :image =>"http://www.morenormalthannot.com/wp-content/uploads/2014/06/friskies.jpg"})
+
+Like.create({:name => "Fancy Feast", :image =>"http://www.petco.com/assets/product_images/0/050000427949C.jpg"})
+
+Like.create({:name => "Mice", :image =>"http://www.rochesterexterminating.com/content/images/pests/trappingmice0.jpg"})
+
+Like.create({:name => "Water", :image =>"http://www.blastr.com/sites/blastr/files/water_572238684.jpg"})
+
+Like.create({:name => "Laying in Sunny Spots", :image =>"http://hellogiggles.com/wp-content/uploads/2014/07/22/cat-in-the-sun.jpg"})
+
+Like.create({:name => "Other Cats", :image =>"http://vignette1.wikia.nocookie.net/houseofnight/images/8/8b/Cats.jpg/revision/latest?cb=20130812053537"})
+
+Like.create({:name => "People", :image =>"http://images.huffingtonpost.com/2014-09-10-teens.jpg"})
+
+Like.create({:name => "Incessant Scratching", :image =>"https://www.petfinder.com/wp-content/uploads/2012/11/106887241-litter-box-etiquette-632x475.jpg"})
+
+Like.create({:name => "Ruining Furniture", :image =>"http://blog.vetnpetdirect.com.au/wp-content/uploads/2015/03/cat-scratching-furniture.jpg"})
