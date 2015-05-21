@@ -63,10 +63,24 @@ body{
   padding-left:30%;
 }
 
+#row_1{
+  height:100px;
+  background-color:white;
+}
+
+#row_2{
+  margin:5%;
+}
+
+#header_div {
+}
+
+
 .header {
   margin: 0 auto;
   font-size: 90px;
   position:absolute;
+
   /*right:-1000px;
   transition:right;
   transition-duration:.1s;
@@ -77,19 +91,6 @@ body{
   right:300px;
 }*/
 
-#row_1{
-  height:100px;
-  background-color:white;
-}
-
-#row_2{
-margin:5%;
-}
-
-#header_div {
-  width:100%;
-  height:100%;
-  }
 
 #profile_header_div {
   background-color: blue;
@@ -103,11 +104,8 @@ margin:5%;
 
 @media screen and (max-width: 480px) {
   .header {
-    margin: 0 auto;
-    margin-left: 30%; }
-
-#header_div {
-  background-color: red; }
+    font-size: 30px;
+    }
 }
 
 .stats-header{
@@ -193,6 +191,15 @@ margin:5%;
   background-color:white;
 }
 
+.btn-danger{
+  background-color:#C00000;
+  margin-top:10%;
+  margin-left: 20%;
+  color:black;
+  border:1px solid white;
+  font-size:20px;
+
+}
 
 
 

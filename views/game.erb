@@ -1,14 +1,15 @@
 <div class="game-container">
-  <!-- first row with header -->
+<!-- first row with header -->
   <div class="row" id="row_1">
-    <div id="header_div">
-      <div class="col-sm-2" class="logo_div">
+<!-- logo -->
+    <div class="col-sm-2">
         <img class="logo" src= "http://vignette3.wikia.nocookie.net/streamclan-roleplaying/images/0/06/Vector-cat-silhouette-shape2.jpg/revision/latest?cb=20141221173003" />
-      </div>
-      <div class="col-sm-10">
+    </div>
+<!-- header -->
+      <div class="col-sm-10" id="header_div">
         <h1 class="header">Battle Cats</h1>
       </div>
-    </div>
+
   </div>
 
 
@@ -24,17 +25,12 @@
         <h3 class="stats-header">Cat Stats</h3>
 
         <ol class="stats-list">
-          <% counter = 0 %>
           <% @cats.each do |cat|%>
-            <% if counter < 5%>
-              <li class="stats-name"><%=cat.name()%></li>
-              <li><img class="cat-thumbnail" src="<%=cat.image%>" />
-              <li class="stats-stats"> Wins: <%=cat.wins()%> <br>Losses: <%=cat.loss()%></li>
-            <%end%>
-          <% counter += 1%>
-
+            <li class="stats-name"><%=cat.name()%></li>
+            <li><img class="cat-thumbnail" src="<%=cat.image%>" />
+            <li class="stats-stats"> Wins: <%=cat.wins()%> <br>Losses: <%=cat.loss()%></li>
+          <br>
           <%end%>
-
         </ol>
 
       </div>
@@ -45,8 +41,10 @@
 
 
 
-<!-- LEFT HAND MODAL -->
+  <!-- LEFT HAND MODAL -->
     <div class="col-sm-4">
+
+      <!-- CAT NAME -->
 
       <div class="cat-div">
 
@@ -67,7 +65,7 @@
                   <h4 class="modal-title">Modal Header</h4>
                 </div>
                 <div class="modal-body">
-                  <img class="cat-pic-modal" src="<%= @kitty1.image%>">
+                  <img src="<%= @kitty1.image%>">
                   <p><%= @kitty1.name%></p>
                   <p><%= @kitty1.bio %></p>
                 </div>
@@ -83,7 +81,7 @@
 
       </div>
 
-        <div class="choice-div">
+        <div class="choice-button">
           <form name="choice" action="/game" method="post">
             <input name="_method" type="hidden" value="patch">
             <input name="choice" type="hidden" value="right_cat">
@@ -98,17 +96,16 @@
       </div>
     </div>
 
-  <div style="margin-top:80px;" class="col-sm-1">
+  <div style="margin-top:40px;" class="col-sm-1">
     <h2 style="color:red;">VS</h2>
   </div>
 
 
 
-
-
-<!-- RIGHT HAND MODAL -->
+  <!-- RIGHT HAND MODAL -->
     <div class="col-sm-4">
 
+      <!-- CAT NAME -->
       <div class="cat-div">
 
         <div class="modal_container">
@@ -127,7 +124,7 @@
                   <h4 class="modal-title">Meet your Battle Cat!</h4>
                 </div>
                 <div class="modal-body">
-                  <img class="cat-pic-modal" src="<%= @kitty2.image%>">
+                  <img src="<%= @kitty2.image%>">
                   <p><%= @kitty2.name%></p>
                   <p><%= @kitty2.bio %></p>
                 </div>
@@ -142,7 +139,7 @@
           </div>
         </div>
 
-          <div class="choice-div">
+          <div class="choice-button">
             <form name="choice" action="/game" method="post">
               <input name="_method" type="hidden" value="patch">
               <input name="choice" type="hidden" value="right_cat">
@@ -154,23 +151,12 @@
           </div>
 
         </div>
-
-
-
-
-
-<!-- TWITTER  -->
-        <div class="twitter-div">
-          <a class="twitter-timeline" href="https://twitter.com/battlecatspdx" data-widget-id="600794044608815104">Tweets by @battlecatspdx</a>
-        </div>
       </div>
   </div>
 
-
-
-
-
-<!-- JAVASCRIPT/JQUERY -->
+  <div class="twitter-div">
+    <a class="twitter-timeline" href="https://twitter.com/battlecatspdx" data-widget-id="600794044608815104">Tweets by @battlecatspdx</a>
+  </div>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 
     // var headerAnimation = function(){
