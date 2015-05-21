@@ -224,3 +224,12 @@ margin:5%;
 #profile_header_div {
   text-color: white;
 }
+
+.about-me-brief{
+  background-color:grey;
+  padding:10px;
+}
+
+.about-me-brief-list{
+  list-style:none;
+}
