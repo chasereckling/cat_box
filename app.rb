@@ -52,6 +52,7 @@ end
 get('/profile/:id') do
   @cat = Cat.find(params.fetch("id"))
   @comments = @cat.comments()
+  @friends = @cat.friends()
   erb(:profile)
 end
 

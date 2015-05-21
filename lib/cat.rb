@@ -1,5 +1,5 @@
 class Cat < ActiveRecord::Base
   validates_presence_of(:name)
   has_many(:comments)
-  has_many(:friends)
+  has_and_belongs_to_many(:friends)
 end
