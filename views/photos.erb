@@ -1,0 +1,33 @@
+<div class="game-container">
+
+  <h1 class="header_form"> Upload Profile Photos </h1>
+
+  <form action="/photos/<%=@cat.id()%>" method="post">
+    <div class="form-group" id="upload_form">
+      <p> Add urls below! <p>
+      <label for="profile_image"> Photo 1</label>
+      <input type="text" name="profile_image" id="profile_image" class="form-control">
+      <br>
+      <button type="submit" class="btn btn-default">Upload Profile Pics!</button>
+    </form>
+    <form action="/profile/<%=@cat.id()%>" method="get">
+      <button type="submit" class="btn btn-default">Return to Profile</button>
+    </form>
+
+    </div>
+
+  
+
+
+
+  </div>
+
+  <% if @photos.any?() %>
+    <% @photos.each do |photo| %>
+
+      <img class="profile_pic" src="<%= photo.profile_image %>"/>
+
+    <% end %>
+  <% else %>
+    <p> You haven't uploaded any photos yet! </p>
+  <% end %>
