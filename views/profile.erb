@@ -48,13 +48,22 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">Modal Header</h4>
+                  <h4 class="modal-title"><%=@cat.name%></h4>
                 </div>
 
                 <div class="modal-body">
                   <img class="cat-pic-modal" src="<%= @cat.image%>">
-                  <p><%= @cat.name%></p>
-                  <p><%= @cat.bio %></p>
+
+
+                  <ul class="about-me-list">
+                    <li><span class="about-me-brief-headers">Location</span> <%=@cat.location%></li>
+                    <li><span class="about-me-brief-headers">Birthday</span> <%=@cat.birthday%></li>
+                    <li><span class="about-me-brief-headers">Favorite Nap Area</span> <%=@cat.naparea%></li>
+                    <li><span class="about-me-brief-headers">Relationship Status</span> <%=@cat.relationship%></li>
+                    <br>
+                    <li><%=@cat.bio%></li>
+                  </ul>
+
                 </div>
 
                 <div class="modal-footer">
@@ -111,7 +120,7 @@
 
       <div class="about-me-brief">
 
-        <ul class="about-me-brief-list">
+        <ul class="about-me-list">
 
           <li><span class="about-me-brief-headers">Location</span> <%=@cat.location%></li>
           <li><span class="about-me-brief-headers">Birthday</span> <%=@cat.birthday%></li>
