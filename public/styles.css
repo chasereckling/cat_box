@@ -1,10 +1,3 @@
-.profile-cat-pic {
-  float: right;
-  margin-bottom: 5%;
-  width: 100%
-}
-
-
 body{
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
@@ -201,6 +194,14 @@ margin:5%;
 
 }
 
+
+
+
+
+
+/*PROFILE CSS*/
+
+
 .blog-list{
   list-style:none;
 }
@@ -214,5 +215,8 @@ margin:5%;
 
 }
 
-
-       /*# sourceMappingURL=styles.css.map */
+.profile-cat-pic {
+  float: right;
+  margin-bottom: 5%;
+  width: 100%
+}
