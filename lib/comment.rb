@@ -1,3 +1,3 @@
 class Comment < ActiveRecord::Base
-belongs_to(:cat)
+  belongs_to(:cat)
 end

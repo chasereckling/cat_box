@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150521161824) do
+ActiveRecord::Schema.define(version: 20150521185844) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,9 +31,22 @@ ActiveRecord::Schema.define(version: 20150521161824) do
     t.string   "naparea"
   end
 
+  create_table "cats_likes", force: :cascade do |t|
+    t.integer "cat_id"
+    t.integer "like_id"
+  end
+
+  add_index "cats_likes", ["cat_id"], name: "index_cats_likes_on_cat_id", using: :btree
+  add_index "cats_likes", ["like_id"], name: "index_cats_likes_on_like_id", using: :btree
+
   create_table "comments", force: :cascade do |t|
     t.integer "cat_id"
     t.text    "description"
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.string "name"
+    t.string "image"
   end
 
 end
