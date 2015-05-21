@@ -109,4 +109,19 @@ post('/profile/:id/likes') do
   @cat.likes.push(like)
   @cats_likes = @cat.likes
   erb(:likes)
+
+get('/photos/:id') do
+  @cat = Cat.find(params.fetch("id").to_i())
+  id = params.fetch("id").to_i()
+  @photos = @cat.photos()
+  erb(:photos)
+end
+
+post('/photos/:id') do
+  @cat = Cat.find(params.fetch("id").to_i())
+  id = params.fetch("id").to_i()
+  image = params.fetch("profile_image")
+  new_photo = Photo.create({:profile_image => image, :cat_id => id})
+  @photos = @cat.photos()
+  erb(:photos)
 end

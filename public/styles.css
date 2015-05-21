@@ -317,3 +317,9 @@ margin:5%;
   width:70px;
   max-width:70px;
 }
+
+.profile_pic {
+  width: 250px;
+  max-width:100%;
+  max-height:100%;
+}
