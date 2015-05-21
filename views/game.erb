@@ -23,7 +23,7 @@
 
         <h3 class="stats-header">Cat Stats</h3>
 
-        <ol>
+        <ol class="stats-list">
           <% @cats.each do |cat|%>
           <li class="stats-name"><%=cat.name()%></li><li class="stats-stats"> Wins: <%=cat.wins()%> &nbsp&nbspLosses: <%=cat.loss()%></li>
           <br>

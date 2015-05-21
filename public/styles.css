@@ -76,6 +76,7 @@ body{
 
 #row_2{
 margin:10%;
+background-color:red;
 }
 
 #header_div {
@@ -120,10 +121,15 @@ margin:10%;
   border:5px solid white;
   border-radius:10%;
   padding:15px;
+  background-color:blue;
+
 }
 
-.stats-div li{
+.stats-list{
   list-style-type:none;
+  word-wrap: break-word;
+  padding:0;
+  padding-left:5%;
   }
 
 .stats-stats{
