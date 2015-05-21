@@ -6,13 +6,13 @@ require('pry')
 helpers do
   def protected!
     return if authorized?
-    headers['WWW-Authenticate'] = 'Basic realm="Restricted Area"'
-    halt 401, "Not authorized\n"
+    headers['WWW-Authenticate'] = 'Basic realm="BATTLE CATS!!!!!!!!!"'
+    halt 401, "YOU AM NO CAT LEGEND\n"
   end
 
   def authorized?
     @auth ||=  Rack::Auth::Basic::Request.new(request.env)
-    @auth.provided? and @auth.basic? and @auth.credentials and @auth.credentials == ['admin', 'admin']
+    @auth.provided? and @auth.basic? and @auth.credentials and @auth.credentials == ['mryamyam', 'mryamyam']
   end
 end
 
@@ -42,7 +42,11 @@ post('/upload') do
   name = params.fetch("name")
   bio = params.fetch("bio")
   photo = params.fetch("photo")
-  new_cat = Cat.create({:name => name, :wins => 0, :loss => 0, :image => photo, :bio => bio})
+  location = params.fetch("location")
+  birthday = params.fetch("birthday")
+  naparea = params.fetch("naparea")
+  relationship = params.fetch("relationship")
+  new_cat = Cat.create({:name => name,:wins => 0, :loss => 0, :image => photo, :bio => bio, :naparea => naparea, :location => location, :birthday => birthday, :relationship => relationship})
   @cats = Cat.all().order(wins: :desc)
   @kitty1 = Cat.find(rand(1..@cats.length))
   @kitty2 = Cat.find(rand(1..@cats.length))
