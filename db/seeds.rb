@@ -42,3 +42,17 @@ Like.create({:name => "People", :image =>"http://images.huffingtonpost.com/2014-
 Like.create({:name => "Incessant Digging", :image =>"http://www.catster.com/files/cat-litter%20box_0.jpg"})
 
 Like.create({:name => "Ruining Furniture", :image =>"http://www.icatcare.org/sites/default/files/kcfinder/images/images/cat-scratching.jpg"})
+
+Like.create({:name => "Bird Watching", :image =>"https://s-media-cache-ak0.pinimg.com/236x/b8/ed/fc/b8edfc62440a27d03e552c0e29fa0a11.jpg"})
+
+Like.create({:name => "Catnip", :image =>"http://www.petmd.com/sites/default/files/better_than_koolaid.jpg"})
+
+Like.create({:name => "Squirrel", :image =>"http://images.nymag.com/news/features/squirrels140127_250.jpg"})
+
+Like.create({:name => "Marking Territory", :image =>"http://pad3.whstatic.com/images/thumb/a/a2/Remove-Cat-Spray-Step-1.jpg/670px-Remove-Cat-Spray-Step-1.jpg"})
+
+Like.create({:name => "Scuba Diving", :image =>"http://www.dumb.com/m_pictures/78229532753d6ab0d285e8fd245760a9.jpg"})
+
+Like.create({:name => "Wearing Hats", :image =>"http://www.somuchviral.com/wp-content/uploads/2014/03/cat-wearing-hat.jpg"})
+
+Like.create({:name => "Sweaters", :image =>"https://40.media.tumblr.com/7e143e42ee8995371861cc985bc1723d/tumblr_mh459vLgvu1rmjbi4o1_500.jpg"})
