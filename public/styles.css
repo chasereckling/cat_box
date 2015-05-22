@@ -224,6 +224,11 @@ margin:5%;
 
 }
 
+.cat-name{
+  font-size:30px;
+  padding-bottom:10px;
+}
+
 .blog-list{
   list-style:none;
   word-wrap: break-word;
@@ -244,6 +249,8 @@ margin:5%;
 }
 
 .pic-div{
+  padding:20px;
+  margin:10px;
   width:auto;
   height:250px;
   overflow:hidden;
@@ -252,8 +259,6 @@ margin:5%;
 
 
 .profile-cat-pic {
-  padding-top:0;
-  padding-left:5px;
   margin-bottom: 5%;
   width:300px;
   height:auto;
@@ -261,22 +266,15 @@ margin:5%;
 
 }
 
-
-.profile-header{
-  padding:20px;
-  padding-bottom:5px;
-}
-
 .about-me-brief{
   background-color:#BADBDC;
-  padding:7px;
   margin:5%;
   border-radius:10px;
 }
 
 .about-me-list{
   list-style:none;
-  padding:5%;
+  padding:30px;
   margin:0;
   line-height:25px;
 }
@@ -370,14 +368,6 @@ margin:5%;
 
 }
 
-#layout-logo{
-  float:left;
-  height:50px;
-  max-height:50px;
-}
-
-#layout-header{
-  float:left;
-  font-size:20px;
-  padding-top:5px;
+.game-blog-row{
+  margin-top:50px;
 }
