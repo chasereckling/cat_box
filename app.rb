@@ -125,7 +125,7 @@ post('/photos/:id') do
   new_photo = Photo.create({:profile_image => image, :cat_id => id})
   @photos = @cat.photos()
   @cats = Cat.all
-  erb(:photos)
+  redirect("/photos/#{@cat.id}")
 end
 
 get('/cats/:id') do
