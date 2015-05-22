@@ -1,40 +1,95 @@
-<div>
-  <img class="catbook-logo" id="layout-logo" src="http://www.bestfriendsstudios.com/images/Product/icon/1461.jpg" />
-  <span class="index-header" id="layout-header">CatBox</span>
-  <img class="catbook-logo" id="layout-logo" src="http://www.bestfriendsstudios.com/images/Product/icon/1457.jpg" />
-
-</div>
-
-
 <div class="profile-container">
 
-<!-- HEADER BELOW -->
+<div class="row">
 
-  <div class="row">
+  <div class="col-md-4">
 
-    <div class="col-md-4">
+      <img class="catbook-logo" id="layout-logo" src="http://www.bestfriendsstudios.com/images/Product/icon/1461.jpg" />
+      <span class="index-header" id="layout-header">CatBox</span>
+      <img class="catbook-logo" id="layout-logo" src="http://www.bestfriendsstudios.com/images/Product/icon/1457.jpg" />
 
-<!-- KITTY NAME  -->
-
-      <h1 class="profile-header"><%=@cat.name()%></h1>
-
-
-
-<!-- PROFILE PICTURE  -->
-
-      <div class="pic-div">
-        <img class="profile-cat-pic" src="<%=@cat.image%>" />
-      </div>
-
-    </div>
-
-
-
+  </div>
 
 <!-- NAVIGATION BAR BELOW -->
     <div class="col-md-8 nav-div">
 
-        <div class="col-md-3 nav-button">
+
+
+      <div class="nav-button">
+<!-- LIKES PAGE BUTTON -->
+
+        <a href="/profile/<%=@cat.id%>/likes"><img class="nav-bar-element" id="likes-button" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-black-icons-animals/012572-glossy-black-icon-animals-animal-cat-print.png" />
+        </a>
+
+      </div>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="nav-button">
+  <!-- FRIENDS PAGE BUTTON -->
+
+
+          <div class="modal_container">
+
+            <!-- Trigger the modal with a button -->
+            <a data-toggle="modal" data-target="#myModal"><img class="nav-bar-element" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/magic-marker-icons-animals/114696-magic-marker-icon-animals-animal-cat3.png" /></a>
+
+            <!-- Modal content-->
+            <div id="myModal" class="modal fade">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"><%=@cat.name()%>'s Friends:</h4>
+                  </div>
+                  <!-- Modal body-->
+                  <div class="modal-body">
+                    <!-- HERE IS A LIST OF FRIENDS THAT YOU CANT REALLY FRIEND!  -->
+                    <% @cats.each() do |cat| %>
+                    <a href="/cat/<%=cat.id()%>"><img class="cat-thumbnail" src="<%=cat.image%>" /></a><%= cat.name() %>
+                    <%end%>
+                  </div>
+                  <div class="modal-footer">
+                    <form action="/cats/<%=@cat.id%>" method="get">
+                      <button id="profile" class='btn btn-primary'>Add Friends</button>
+                    </form>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="nav-button">
+  <!-- PHOTO PAGE BUTTON -->
+
+          <a href="/photos/<%=@cat.id()%>"><img class="nav-bar-element" src="http://iconshow.me/media/images/Mixed/line-icon/png/512/camera-512.png" /></a>
+
+
+        </div>
+
+
+
+
+
+        <div class="nav-button">
   <!-- ABOUT ME MODAL -->
 
           <div class="modal_container">
@@ -83,60 +138,50 @@
 
 
 
-        <div class="col-md-3 nav-button">
-  <!-- FRIENDS PAGE BUTTON -->
 
 
-          <div class="modal_container">
-
-            <!-- Trigger the modal with a button -->
-            <a data-toggle="modal" data-target="#myModal"><img class="nav-bar-element" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/magic-marker-icons-animals/114696-magic-marker-icon-animals-animal-cat3.png" /></a>
-
-            <!-- Modal content-->
-            <div id="myModal" class="modal fade">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title"><%=@cat.name()%>'s Friends:</h4>
-                  </div>
-                  <!-- Modal body-->
-                  <div class="modal-body">
-                    <!-- HERE IS A LIST OF FRIENDS THAT YOU CANT REALLY FRIEND!  -->
-                    <% @cats.each() do |cat| %>
-                    <a href="/cat/<%=cat.id()%>"><img class="cat-thumbnail" src="<%=cat.image%>" /></a><%= cat.name() %>
-                    <%end%>
-                  </div>
-                  <div class="modal-footer">
-                    <form action="/cats/<%=@cat.id%>" method="get">
-                      <button id="profile" class='btn btn-primary'>Add Friends</button>
-                    </form>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-3 nav-button">
-  <!-- PHOTO PAGE BUTTON -->
-
-          <a href="/photos/<%=@cat.id()%>"><img class="nav-bar-element" src="http://www.clker.com/cliparts/i/l/9/W/l/m/camera-icon-md.png" /></a>
 
 
-        </div>
 
-        <div class="col-md-3 nav-button">
-  <!-- LIKES PAGE BUTTON -->
 
-          <a href="/profile/<%=@cat.id%>/likes"><img class="nav-bar-element" id="likes-button" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-black-icons-animals/012572-glossy-black-icon-animals-animal-cat-print.png" />
-          </a>
 
-        </div>
+      </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- HEADER BELOW -->
+
+  <div class="row">
+
+    <div class="col-md-4">
+
+<!-- KITTY NAME  -->
+
+      <h1 class="profile-header"><%=@cat.name()%></h1>
+
+
+
+<!-- PROFILE PICTURE  -->
+
+      <div class="pic-div">
+        <img class="profile-cat-pic" src="<%=@cat.image%>" />
+      </div>
 
     </div>
-  </div>
+
+
+
 
 
 
@@ -234,4 +279,5 @@
 
   </div>
 
+</div>
 </div>

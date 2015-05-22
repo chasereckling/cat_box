@@ -219,7 +219,7 @@ margin:5%;
 /*PROFILE CSS*/
 
 .profile-container{
-  margin-top:20%;
+  margin-top:5%;
 
 
 }
@@ -277,28 +277,15 @@ margin:5%;
   font-size:15px;
 }
 
-.nav-div{
-
-}
-
-
 .nav-button{
-  width:15%;
+  width:58px;
   height:100px;
-  padding:10px;
-  margin:5px;
-
+  float: right;
 }
-
 
 .nav-bar-element{
-  width:70px;
-  max-width:70px;
-  margin-bottom:0;
-  padding-bottom:0;
-}
-
-#likes-button{
+  width:40px;
+  margin:5px;
 }
 
 .likes-form{
@@ -374,13 +361,13 @@ margin:5%;
 }
 
 #layout-logo{
-  float:right;
+  float:left;
   height:50px;
   max-height:50px;
 }
 
 #layout-header{
-  float:right;
+  float:left;
   font-size:20px;
   padding-top:5px;
 }
