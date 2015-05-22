@@ -21,15 +21,12 @@ get('/') do
   erb(:index)
 end
 
-get('/login') do
+get('/login/:7') do
   protected!
-  @cats = Cat.all().order(wins: :desc)
-  @kitty1 = Cat.find(rand(1..@cats.length))
-  @kitty2 = Cat.find(rand(1..@cats.length))
-  if @kitty1 == @kitty2
-    redirect('/game')
-  end
-  erb(:game)
+  @cats = Cat.all()
+  @cat = Cat.find(params.fetch("7"))
+  @comments = @cat.comments()
+  erb(:profile)
 end
 
 
