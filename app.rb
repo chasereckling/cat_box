@@ -80,7 +80,7 @@ end
 get('/profile/:id') do
   @cats = Cat.all()
   @cat = Cat.find(params.fetch("id"))
-  @comments = @cat.comments()
+  @comments = @cat.comments().order(created_at: :desc)
   erb(:profile)
 end
 
@@ -90,7 +90,7 @@ post('/profile/:id') do
   id = params.fetch("id").to_i()
   image = params.fetch("comment_img")
   @new_comment = Comment.create({:description => comment, :cat_id => id, :comment_photo => image })
-  @comments = @cat.comments()
+  @comments = @cat.comments().order(created_at: :desc)
   redirect("/profile/#{@cat.id}")
 end
 
