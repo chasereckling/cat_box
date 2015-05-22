@@ -324,6 +324,14 @@ margin:5%;
   color:white;
 }
 
+.game-div{
+  background-color:#BADBDC;
+  border-radius:10px;
+  margin:10px;
+  margin-left:30px;
+}
+
+
 .game-list{
   list-style:none;
   padding:10px;
@@ -336,7 +344,7 @@ margin:5%;
 
 .game-link{
   margin:3%;
-  font-size:15px;
+  font-size:12px;
   color:black;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
@@ -448,5 +456,10 @@ figcaption{
 }
 
 .search_div{
-  padding-left:10px;
+  padding-top:30px;
+  padding-left:30px;
+}
+
+.error-message{
+  margin:30px;
 }

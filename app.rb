@@ -141,3 +141,17 @@ patch('/profile/:id') do
   # @cat.friend.push(new_friend)
   redirect("/profile/#{@cat.id}")
 end
+
+get('/search') do
+  @cat = Cat.find(params.fetch("id").to_i)
+  @search = params.fetch("cat_name")
+  @cats=Cat.all
+  @cats.each do |cat|
+    @search_cat = nil
+    if cat.name.downcase == params.fetch("cat_name").downcase
+      @search_cat = cat
+      redirect("/profile/#{@search_cat.id}")
+    end
+  end
+  erb(:error)
+end

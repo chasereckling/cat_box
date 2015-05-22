@@ -179,7 +179,9 @@
 
 
 <div class="search_div">
-  <input type='text' placeholder='Search...' id='search-text-input' />
+  <form action="/search" action="get">
+  <input type='text' name="cat_name" placeholder='Search for cats...' id='search-text-input' />
+  <input name="id" type="hidden" value="<%=@cat.id%>">
   <div id='button-holder'>
     <img src='/img/search.png' />
   </div>
@@ -212,7 +214,7 @@
 <!-- GAMES SECTION SHOWING WHAT THE KITTY IS PLAYING -->
     <div class="col-md-4">
 
-        <div class="about-me-brief">
+        <div class="game-div">
 
           <h4 class="game-box-header">Games</h4>
 
