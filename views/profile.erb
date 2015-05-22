@@ -239,7 +239,7 @@
 <!-- INDIVIDUAL BLOG POSTS -->
     <ul class="blog-list">
       <% @comments.each() do |comment| %>
-      <li><div class="blog-post-div"><%=comment.created_at.to_date.strftime('%A')%> <%=comment.created_at.to_date.strftime('%B')%> <%=comment.created_at.to_date.strftime('%d')%>, <%=comment.created_at.to_date.strftime('%Y')%><br /><%= comment.description() %><img class="profile_pic" src="<%= comment.comment_photo() %>"/></div></li>
+      <li><div class="blog-post-div"><strong><%=comment.created_at.to_date.strftime('%A')%> <%=comment.created_at.to_date.strftime('%B')%> <%=comment.created_at.to_date.strftime('%d')%>, <%=comment.created_at.to_date.strftime('%Y')%></strong><br /><br /><%= comment.description() %><img class="profile_pic" src="<%= comment.comment_photo() %>"/></div></li>
 
       <% end %>
     </ul>
