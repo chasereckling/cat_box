@@ -306,6 +306,17 @@ margin:5%;
   padding:0;
 }
 
+
+.game-box-header{
+  padding:5px;
+  font-size:20px;
+  margin:0 auto;
+  padding-left:37%;
+  background-color:lightgrey;
+  border-radius:10px;
+  color:white;
+}
+
 .game-list{
   list-style:none;
   padding:10px;
@@ -318,7 +329,7 @@ margin:5%;
 
 .game-link{
   margin:3%;
-  font-size:15px;
+  font-size:10px;
   color:white;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 600;
