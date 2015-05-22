@@ -109,6 +109,8 @@ margin:5%;
   margin-left:10%;
   margin-bottom:10%;
 }
+
+
 /*
 .cat-name{
   padding:15px;
@@ -200,6 +202,7 @@ margin:5%;
 
 
 /*INDEX CSS*/
+
 
 .index-header-div{
   padding:10px;
@@ -407,4 +410,43 @@ figcaption{
 
 .friends{
   padding:10px;
+}
+
+#search-text-input{
+  border-top:thin solid  #e5e5e5;
+  border-right:thin solid #e5e5e5;
+  border-bottom:0;
+  border-left:thin solid  #e5e5e5;
+  box-shadow:0px 1px 1px 1px #e5e5e5;
+  float:left;
+  height:27px;
+  margin:.8em 0 0 .5em;
+  outline:0;
+  padding:.4em 0 .4em .6em;
+  width:183px;
+}
+
+#button-holder{
+  background-color:#f1f1f1;
+  border-top:thin solid #e5e5e5;
+  box-shadow:1px 1px 1px 1px #e5e5e5;
+  cursor:pointer;
+  float:left;
+  height:27px;
+  margin:11px 0 0 0;
+  text-align:center;
+  width:50px;
+}
+
+#button-holder img{
+  margin:4px;
+  width:20px;
+}
+
+.btn-lg{
+  margin:7px;
+}
+
+.search_div{
+  padding-left:10px;
 }
