@@ -32,15 +32,15 @@
 
 
 <!-- NAVIGATION BAR BELOW -->
-    <div class="col-md-8">
+    <div class="col-md-8 nav-div">
 
-        <div class="col-sm-3 nav-button">
+        <div class="col-md-3 nav-button">
   <!-- ABOUT ME MODAL -->
 
           <div class="modal_container">
 
             <!-- Trigger the modal with a button -->
-            <a data-toggle="modal" data-target="#myModal2"><img class="nav-bar-element" src="/img/about.png" /></a>
+            <a data-toggle="modal" data-target="#myModal2"><img class="nav-bar-element" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons-256/rounded-glossy-black-icons-animals/016581-rounded-glossy-black-icon-animals-animal-cat4.png" /></a>
             <!-- Modal -->
             <div class="modal fade" id="myModal2" role="dialog">
               <div class="modal-dialog">
@@ -83,14 +83,14 @@
 
 
 
-        <div class="col-sm-3 nav-button">
+        <div class="col-md-3 nav-button">
   <!-- FRIENDS PAGE BUTTON -->
 
 
           <div class="modal_container">
 
             <!-- Trigger the modal with a button -->
-            <a href="#myModal" role="button" class="btn btn-large btn-primary" data-toggle="modal">Friends</a>
+            <a data-toggle="modal" data-target="#myModal"><img class="nav-bar-element" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/magic-marker-icons-animals/114696-magic-marker-icon-animals-animal-cat3.png" /></a>
 
             <!-- Modal content-->
             <div id="myModal" class="modal fade">
@@ -119,15 +119,15 @@
           </div>
         </div>
 
-        <div class="col-sm-3 nav-button">
+        <div class="col-md-3 nav-button">
   <!-- PHOTO PAGE BUTTON -->
 
-  <form action="/photos/<%=@cat.id()%>" method="get">
-  <button type="submit" class="btn btn-default">Photos</button>
-  </form>
+          <a href="/photos/<%=@cat.id()%>"><img class="nav-bar-element" src="http://www.clker.com/cliparts/i/l/9/W/l/m/camera-icon-md.png" /></a>
+
+
         </div>
 
-        <div class="col-sm-3 nav-button">
+        <div class="col-md-3 nav-button">
   <!-- LIKES PAGE BUTTON -->
 
           <a href="/profile/<%=@cat.id%>/likes"><img class="nav-bar-element" id="likes-button" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-black-icons-animals/012572-glossy-black-icon-animals-animal-cat-print.png" />
