@@ -180,7 +180,7 @@
 
 
 
-
+<br /><br /><br />
 
 
 
@@ -194,14 +194,39 @@
 
 
 
-<!-- MY LIKES & HOME BUTTON  -->
+<!-- MY LIKES -->
 
-      <div class="col-md-8">
+      <div class="col-md-12">
+
+
+
+
+        <h4>Add Likes</h4>
+
+        <form class="like-form" action="/profile/<%= @cat.id %>/likes" method="post">
+          <select name="like" id="like">
+            <% (@all_likes-@cats_likes).each do |like|%>
+            <option value="<%=like.id%>">
+              <%= like.name %>
+            </option>
+            <% end%>
+          </select>
+          <button type="submit">Add Like</button>
+        </form>
+
+
+
 
 
 
 <br><br>
-<!-- MY LIKES -->
+
+
+
+
+
+
+
 
         <%@cats_likes.each do |like|%>
           <figure class="like-added">
@@ -217,39 +242,18 @@
 
 
 
-<!-- OTHER POSSIBLE LIKES  -->
-
-        <div class="col-md-4" id="add-like-div">
-
-
-          <h4>Add Likes</h4>
-
-          <form class="like-form" action="/profile/<%= @cat.id %>/likes" method="post">
-            <select name="like" id="like">
-              <% (@all_likes-@cats_likes).each do |like|%>
-              <option value="<%=like.id%>">
-                <%= like.name %>
-              </option>
-              <% end%>
-            </select>
-            <button type="submit">Add Like</button>
-          </form>
 
 
 
-          <h4>All Likes</h4>
 
 
-          <%@all_likes.each do |like|%>
-            <div class="like-div">
-              <img class="like-pic" src="<%= like.image %>" />
-              <span class="like-name"> <%= like.name %> </span>
-            </div>
-          <% end %>
+
+
+
+
 
 
         </div>
 
-    </div>
 
 </div>
