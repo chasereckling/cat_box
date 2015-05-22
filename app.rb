@@ -43,14 +43,14 @@ post('/upload') do
   birthday = params.fetch("birthday")
   naparea = params.fetch("naparea")
   relationship = params.fetch("relationship")
-  new_cat = Cat.create({:name => name,:wins => 0, :loss => 0, :image => photo, :bio => bio, :naparea => naparea, :location => location, :birthday => birthday, :relationship => relationship})
+  @cat = Cat.create({:name => name,:wins => 0, :loss => 0, :image => photo, :bio => bio, :naparea => naparea, :location => location, :birthday => birthday, :relationship => relationship})
   @cats = Cat.all().order(wins: :desc)
-  @kitty1 = Cat.find(rand(1..@cats.length))
-  @kitty2 = Cat.find(rand(1..@cats.length))
-  if @kitty1 == @kitty2
-    redirect('/game')
-  end
-  erb(:game)
+  # @kitty1 = Cat.find(rand(1..@cats.length))
+  # @kitty2 = Cat.find(rand(1..@cats.length))
+  # if @kitty1 == @kitty2
+    redirect("/profile/#{@cat.id}")
+  # end
+  erb(:profile)
 end
 
 get('/game') do

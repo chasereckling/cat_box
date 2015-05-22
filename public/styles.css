@@ -3,8 +3,13 @@ body{
   font-weight: 300;
 }
 
+.upload_form label{
+  letter-spacing:1px;
+  padding-top:10px;
+}
+
 .game-container{
-  background-color:black;
+  background-color:#BADBDC;
   margin-top:3%;
 }
 
@@ -160,7 +165,7 @@ margin:5%;
 }
 
 
-#upload_form{
+.upload_form{
   color:white;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
@@ -169,11 +174,11 @@ margin:5%;
 }
 
 .header_form{
+  text-align:center;
   color:white;
   font-size:60px;
   padding:2%;
   margin-bottom:2%;
-  padding-left:15%;
   font-family: 'Dosis', sans-serif;
 }
 
@@ -456,7 +461,7 @@ figcaption{
 }
 
 .search_div{
-  padding-top:30px;
+  padding-top:5px;
   padding-left:30px;
 }
 
