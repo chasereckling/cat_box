@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150521220212) do
+ActiveRecord::Schema.define(version: 20150522162427) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,9 +40,11 @@ ActiveRecord::Schema.define(version: 20150521220212) do
   add_index "cats_likes", ["like_id"], name: "index_cats_likes_on_like_id", using: :btree
 
   create_table "comments", force: :cascade do |t|
-    t.integer "cat_id"
-    t.text    "description"
-    t.string  "comment_photo"
+    t.integer  "cat_id"
+    t.string   "comment_photo"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "friendings", force: :cascade do |t|
