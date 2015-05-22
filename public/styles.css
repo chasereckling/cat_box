@@ -9,7 +9,7 @@ body{
 }
 
 .game-container{
-  background-color:#BADBDC;
+  background-color:black;
   margin-top:3%;
 }
 
@@ -467,4 +467,11 @@ figcaption{
 
 .error-message{
   margin:30px;
+}
+
+.upload-container{
+    background-color:#BADBDC;
+    margin-top:3%;
+
+
 }
