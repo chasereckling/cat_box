@@ -47,7 +47,7 @@
                   <div class="modal-body">
                     <!-- HERE IS A LIST OF FRIENDS THAT YOU CANT REALLY FRIEND!  -->
                     <% @cats.each() do |cat| %>
-                    <a href="/profile/<%=cat.id()%>"><img class="cat-thumbnail" src="<%=cat.image%>" /></a><%= cat.name() %>
+                    <a href="/profile/<%=cat.id()%>"><img class="cat-thumbnail friends" src="<%=cat.image%>" /></a><%= cat.name() %>
                     <%end%>
                   </div>
                   <div class="modal-footer">
@@ -198,7 +198,7 @@
             <li><a class="game-link" href="/game"><img class="game-logo" src="http://vignette3.wikia.nocookie.net/streamclan-roleplaying/images/0/06/Vector-cat-silhouette-shape2.jpg/revision/latest?cb=20141221173003" />
               <span class="game-name">Battle Cats</span></a></li>
             <li><a class="game-link" href="/game"><img class="game-logo" src="http://s3.amazonaws.com/kidzworld_photo/images/2013519/6b4640d8-fea0-4e63-b3a3-461ceaa1468d/sahara-gallery.jpg" />
-              <span class="game-name">Infinite CATBOX</span></a></li>
+              <span class="game-name">DIG!</span></a></li>
             <li><a class="game-link" href="/game"><img class="game-logo" src="https://cf.geekdo-images.com/images/pic1470097.jpg" />
               <span class="game-name">Escape From NY pounds</span></a></li>
             <li><a class="game-link" href="/game"><img class="game-logo" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRLme0vTcSCB2eq6dcoXOCzv5BK8gUB5LKDD7-uyd3rCaAnalzw" />

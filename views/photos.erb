@@ -48,7 +48,7 @@
                     <div class="modal-body">
                       <!-- HERE IS A LIST OF FRIENDS THAT YOU CANT REALLY FRIEND!  -->
                       <% @cats.each() do |cat| %>
-                      <a href="/cat/<%=cat.id()%>"><img class="cat-thumbnail" src="<%=cat.image%>" /></a><%= cat.name() %>
+                      <a href="/profile/<%=cat.id()%>"><img class="cat-thumbnail friends" src="<%=cat.image%>" /></a><%= cat.name() %>
                       <%end%>
                     </div>
                     <div class="modal-footer">
