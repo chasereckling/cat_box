@@ -220,17 +220,17 @@
 <!-- BLOG INPUT FORM -->
 
 
-    <div class="blog-form">
-      <form action="/profile/<%=@cat.id%>" method="post">
-        <div class="form-group">
-        <label for="comment"> </label>
-        <input text="comment" name="comment" id="comment" class="form-control" placeholder="Yo <%= @cat.name %>, what up?!">
-        <label for="comment_img"> </label>
-        <input text="comment_img" name="comment_img" id="comment_img" class="form-control" placeholder="image url:">
-        </div>
-        <button type="submit" class="btn btn-info">Submit Comment</button>
-      </form>
-    </div>
+      <div class="blog-form">
+        <form action="/profile/<%=@cat.id%>" method="post">
+          <div class="form-group">
+          <label for="comment"> </label>
+          <input text="comment" name="comment" id="comment" class="form-control" placeholder="Yo <%= @cat.name %>, what up?!">
+          <label for="comment_img"> </label>
+          <input text="comment_img" name="comment_img" id="comment_img" class="form-control" placeholder="image url:">
+          </div>
+          <button type="submit" class="btn btn-info">Submit Comment</button>
+        </form>
+      </div>
 
 
 
@@ -239,7 +239,7 @@
 <!-- INDIVIDUAL BLOG POSTS -->
     <ul class="blog-list">
       <% @comments.each() do |comment| %>
-      <li><div class="blog-post-div"><%= comment.description() %><img class="profile_pic" src="<%= comment.comment_photo() %>"/></div></li>
+      <li><div class="blog-post-div"><%=comment.created_at.to_date.strftime('%A')%> <%=comment.created_at.to_date.strftime('%B')%> <%=comment.created_at.to_date.strftime('%d')%>, <%=comment.created_at.to_date.strftime('%Y')%><br /><%= comment.description() %><img class="profile_pic" src="<%= comment.comment_photo() %>"/></div></li>
 
       <% end %>
     </ul>
