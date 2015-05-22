@@ -26,15 +26,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
         <div class="nav-button">
   <!-- FRIENDS PAGE BUTTON -->
 
@@ -131,18 +122,6 @@
             </div>
           </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
       </div>
 </div>
 
@@ -158,16 +137,11 @@
 
 
 
-<!-- HEADER BELOW -->
+<!-- PIC AREA -->
 
   <div class="row">
 
     <div class="col-md-4">
-
-<!-- KITTY NAME  -->
-
-      <h1 class="profile-header"><%=@cat.name()%></h1>
-
 
 
 <!-- PROFILE PICTURE  -->
@@ -180,6 +154,27 @@
 
 
 
+    <!-- EVERYTHING BELOW PICTURE AND NAVIGATION BAR -->
+
+      <div class="col-md-8">
+    <!-- BRIEF ABOUT ME SECTION BELOW PICTURE -->
+
+
+          <div class="about-me-brief">
+
+            <ul class="about-me-list">
+
+              <li><span class="about-me-brief-headers">Location</span> <%=@cat.location%></li>
+              <li><span class="about-me-brief-headers">Birthday</span> <%=@cat.birthday%></li>
+              <li><span class="about-me-brief-headers">Favorite Nap Area</span> <%=@cat.naparea%></li>
+              <li><span class="about-me-brief-headers">Relationship Status</span> <%=@cat.relationship%></li>
+
+            </ul>
+
+          </div>
+
+        </div>
+  </div>
 
 
 
@@ -187,32 +182,15 @@
 
 
 
-<!-- EVERYTHING BELOW PICTURE AND NAVIGATION BAR -->
+
+
+
+
+
   <div class="row">
 
-    <div class="col-md-6">
-<!-- BRIEF ABOUT ME SECTION BELOW PICTURE -->
-
-
-      <div class="about-me-brief">
-
-        <ul class="about-me-list">
-
-          <li><span class="about-me-brief-headers">Location</span> <%=@cat.location%></li>
-          <li><span class="about-me-brief-headers">Birthday</span> <%=@cat.birthday%></li>
-          <li><span class="about-me-brief-headers">Favorite Nap Area</span> <%=@cat.naparea%></li>
-          <li><span class="about-me-brief-headers">Relationship Status</span> <%=@cat.relationship%></li>
-
-        </ul>
-
-      </div>
-
-
-
-
-
 <!-- GAMES SECTION SHOWING WHAT THE KITTY IS PLAYING -->
-
+    <div class="col-md-4">
 
         <div class="about-me-brief">
 
@@ -232,12 +210,8 @@
           </ul>
 
         </div>
+      </div>
 
-
-
-
-
-    </div>
 
 
 
@@ -245,7 +219,7 @@
 
 
 <!-- BLOG BELOW -->
-    <div class="col-md-6">
+    <div class="col-md-8">
 <!-- BLOG INPUT FORM -->
 
 
@@ -277,5 +251,4 @@
 
   </div>
 
-</div>
 </div>
