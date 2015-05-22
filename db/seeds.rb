@@ -35,7 +35,7 @@ Like.create({:name => "Water", :image =>"http://www.blastr.com/sites/blastr/file
 
 Like.create({:name => "Laying in Sun", :image =>"http://hellogiggles.com/wp-content/uploads/2014/07/22/cat-in-the-sun.jpg"})
 
-Like.create({:name => "Other Cats", :image =>"http://vignette1.wikia.nocookie.net/houseofnight/images/8/8b/Cats.jpg/revision/latest?cb=20130812053537"})
+Like.create({:name => "Other Cats", :image =>"http://vignette1.wikia.nocookie.net/houseofnight/images/8/8b/Cats.jpg"})
 
 Like.create({:name => "People", :image =>"http://images.huffingtonpost.com/2014-09-10-teens.jpg"})
 

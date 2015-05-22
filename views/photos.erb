@@ -1,16 +1,188 @@
-<div>
-  <img class="catbook-logo" id="layout-logo" src="http://www.bestfriendsstudios.com/images/Product/icon/1461.jpg" />
-  <span class="index-header" id="layout-header">CatBox</span>
-  <img class="catbook-logo" id="layout-logo" src="http://www.bestfriendsstudios.com/images/Product/icon/1457.jpg" />
-
-</div>
+<div class="profile-container">
 
 
+  <div class="row">
+
+    <div class="col-md-4">
+  <!-- LOGO -->
+      <a href="/profile/<%=@cat.id%>"><img src="https://farm8.staticflickr.com/7694/17952437982_1c7a2cbca3_o.png" /></a>
+
+    </div>
+
+  <!-- NAVIGATION BAR BELOW -->
+      <div class="col-md-8 nav-div">
+
+
+
+        <div class="nav-button">
+  <!-- LIKES PAGE BUTTON -->
+
+          <a href="/profile/<%=@cat.id%>/likes"><img class="nav-bar-element" id="likes-button" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-black-icons-animals/012572-glossy-black-icon-animals-animal-cat-print.png" />
+          </a>
+
+        </div>
 
 
 
 
-<div class="game-container">
+
+
+          <div class="nav-button">
+    <!-- FRIENDS PAGE BUTTON -->
+
+
+            <div class="modal_container">
+
+              <!-- Trigger the modal with a button -->
+              <a data-toggle="modal" data-target="#myModal"><img class="nav-bar-element" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/magic-marker-icons-animals/114696-magic-marker-icon-animals-animal-cat3.png" /></a>
+
+              <!-- Modal content-->
+              <div id="myModal" class="modal fade">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      <h4 class="modal-title"><%=@cat.name()%>'s Friends:</h4>
+                    </div>
+                    <!-- Modal body-->
+                    <div class="modal-body">
+                      <!-- HERE IS A LIST OF FRIENDS THAT YOU CANT REALLY FRIEND!  -->
+                      <% @cats.each() do |cat| %>
+                      <a href="/cat/<%=cat.id()%>"><img class="cat-thumbnail" src="<%=cat.image%>" /></a><%= cat.name() %>
+                      <%end%>
+                    </div>
+                    <div class="modal-footer">
+                      <form action="/cats/<%=@cat.id%>" method="get">
+                        <button id="profile" class='btn btn-primary'>Add Friends</button>
+                      </form>
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="nav-button">
+    <!-- PHOTO PAGE BUTTON -->
+
+            <a href="/photos/<%=@cat.id()%>"><img class="nav-bar-element" src="http://iconshow.me/media/images/Mixed/line-icon/png/512/camera-512.png" /></a>
+
+
+          </div>
+
+
+
+
+
+          <div class="nav-button">
+    <!-- ABOUT ME MODAL -->
+
+            <div class="modal_container fixed-width">
+
+              <!-- Trigger the modal with a button -->
+              <a data-toggle="modal" data-target="#myModal2"><img class="nav-bar-element" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons-256/rounded-glossy-black-icons-animals/016581-rounded-glossy-black-icon-animals-animal-cat4.png" /></a>
+              <!-- Modal -->
+              <div class="modal fade" id="myModal2" role="dialog">
+                <div class="modal-dialog">
+
+
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title"><%=@cat.name%></h4>
+                    </div>
+
+                    <div class="modal-body">
+                      <img class="cat-pic-modal" src="<%= @cat.image%>">
+
+
+                      <ul class="about-me-list">
+                        <li><span class="about-me-brief-headers">Location</span> <%=@cat.location%></li>
+                        <li><span class="about-me-brief-headers">Birthday</span> <%=@cat.birthday%></li>
+                        <li><span class="about-me-brief-headers">Favorite Nap Area</span> <%=@cat.naparea%></li>
+                        <li><span class="about-me-brief-headers">Relationship Status</span> <%=@cat.relationship%></li>
+                        <br>
+                        <li><%=@cat.bio%></li>
+                      </ul>
+
+
+                    </div>
+
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <!-- PIC AREA -->
+
+    <div class="row">
+
+      <div class="col-md-4">
+
+
+  <!-- PROFILE PICTURE  -->
+
+        <div class="pic-div">
+          <img class="profile-cat-pic" src="<%=@cat.image%>" />
+        </div>
+
+      </div>
+
+
+
+
+        <div class="col-md-8">
+      <!-- BRIEF ABOUT ME SECTION NEXT TO PICTURE -->
+
+
+            <div class="about-me-brief">
+
+              <ul class="about-me-list">
+
+                <li class="cat-name"> <%=@cat.name%></li>
+                <li><span class="about-me-brief-headers">Location</span> <%=@cat.location%></li>
+                <li><span class="about-me-brief-headers">Birthday</span> <%=@cat.birthday%></li>
+                <li><span class="about-me-brief-headers">Favorite Nap Area</span> <%=@cat.naparea%></li>
+                <li><span class="about-me-brief-headers">Relationship Status</span> <%=@cat.relationship%></li>
+
+              </ul>
+
+            </div>
+
+          </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
 
   <h1 class="header_form"> Upload Profile Photos </h1>
 

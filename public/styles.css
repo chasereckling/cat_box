@@ -371,3 +371,7 @@ margin:5%;
 .game-blog-row{
   margin-top:50px;
 }
+
+.fixed-width{
+  width:50px;
+}

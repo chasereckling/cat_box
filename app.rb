@@ -115,6 +115,7 @@ get('/photos/:id') do
   @cat = Cat.find(params.fetch("id").to_i())
   id = params.fetch("id").to_i()
   @photos = @cat.photos()
+  @cats = Cat.all
   erb(:photos)
 end
 
@@ -124,6 +125,7 @@ post('/photos/:id') do
   image = params.fetch("profile_image")
   new_photo = Photo.create({:profile_image => image, :cat_id => id})
   @photos = @cat.photos()
+  @cats = Cat.all
   erb(:photos)
 end
 
