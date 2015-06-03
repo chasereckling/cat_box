@@ -1,10 +1,13 @@
 Battle Cats version 1.0 (05/19/15)
+-----------
 
 What is it?
+-----------
 
 Battle Cats is a program that allows the user to upload a picture and profile of their kitty in a battle of cuteness against other uploaded cats.
 
 Setup:
+------
 
 Battle Cats uses ruby version 2.2.0.
 
@@ -29,9 +32,11 @@ $ ruby app.rb
 In your browser navigate to the url: localhost:4567.
 
 Copyright and Licensing:
+------------------------
 
 For copyright and licensing Battle Cats uses the GNU GENERAL PUBLIC LICENSE, version 2.
 
 Author:
+-------
 
 Chase Reckling chase.reckling@gmail.com
