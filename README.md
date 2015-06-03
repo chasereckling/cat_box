@@ -1,17 +1,17 @@
-Battle Cats version 1.0 (05/19/15)
+CatBox version 1.0 (05/19/15)
 -----------
 
 What is it?
 -----------
 
-Battle Cats is a program that allows the user to upload a picture and profile of their kitty in a battle of cuteness against other uploaded cats.
+CatBox is a social networking site for your Cat! CatBox also allows the user to upload a picture and profile of their kitty in a battle of cuteness against other uploaded cats, in the Battle Cats game on your cats' profile page.
 
 Setup:
 ------
 
-Battle Cats uses ruby version 2.2.0.
+CatBox uses ruby version 2.2.0.
 
-1. After you download Battle Cats navigate to the 'battle_cats' file folder in your terminal then run the following command to install the Gemfile:
+1. After you download CatBox navigate to the 'cat_box' file folder in your terminal then run the following command to install the Gemfile:
 
    $ bundle install
 
@@ -30,6 +30,10 @@ Battle Cats uses ruby version 2.2.0.
    $ ruby app.rb
 
 5. In your browser navigate to the url: localhost:4567.
+
+6. Click 'Sign Up' to set up your cats profile.
+
+7. To play the Battle Cats game, click on the Battle Cats icon on your cats profile page
 
 Copyright and Licensing:
 ------------------------
