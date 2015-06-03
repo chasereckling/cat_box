@@ -25,11 +25,11 @@ Battle Cats uses ruby version 2.2.0.
    $ rake db:migrate
    $ rake db:seed
 
-Run ruby app.rb in the terminal:
+4. Run ruby app.rb in the terminal:
 
-$ ruby app.rb
+   $ ruby app.rb
 
-In your browser navigate to the url: localhost:4567.
+5. In your browser navigate to the url: localhost:4567.
 
 Copyright and Licensing:
 ------------------------
